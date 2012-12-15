@@ -1,8 +1,8 @@
 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMidYMid meet' viewBox='0 0 800 2972.6'>
   <rect fill='blue' height='0.1' stroke='black' width='12' x='15' y='2672.5' />
-  <text x='15' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 15,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Linux (sparc)" (1)</text>
+  <text x='15' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 15,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Linux (mips32)" (1)</text>
   <rect fill='blue' height='0.1' stroke='black' width='12' x='30' y='2672.5' />
-  <text x='30' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 30,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Linux (mips32)" (1)</text>
+  <text x='30' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 30,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Linux (sparc)" (1)</text>
   <rect fill='blue' height='0.1' stroke='black' width='12' x='45' y='2672.5' />
   <text x='45' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 45,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"UnixWare (IA32)" (1)</text>
   <rect fill='blue' height='0.1' stroke='black' width='12' x='60' y='2672.5' />
@@ -10,13 +10,13 @@
   <rect fill='blue' height='0.1' stroke='black' width='12' x='75' y='2672.5' />
   <text x='75' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 75,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Windows Server 2003 (amd64)" (1)</text>
   <rect fill='blue' height='0.2' stroke='black' width='12' x='90' y='2672.4' />
-  <text x='90' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 90,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"OpenBSD (i386)" (2)</text>
+  <text x='90' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 90,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Darwin (i386)" (2)</text>
   <rect fill='blue' height='0.2' stroke='black' width='12' x='105' y='2672.4' />
-  <text x='105' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 105,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Darwin (i386)" (2)</text>
+  <text x='105' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 105,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"NetBSD (amd64)" (2)</text>
   <rect fill='blue' height='0.2' stroke='black' width='12' x='120' y='2672.4' />
   <text x='120' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 120,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"NetBSD (i386)" (2)</text>
   <rect fill='blue' height='0.2' stroke='black' width='12' x='135' y='2672.4' />
-  <text x='135' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 135,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"NetBSD (amd64)" (2)</text>
+  <text x='135' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 135,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"OpenBSD (i386)" (2)</text>
   <rect fill='blue' height='0.3' stroke='black' width='12' x='150' y='2672.3' />
   <text x='150' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 150,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Mac OS X (amd64)" (3)</text>
   <rect fill='blue' height='0.4' stroke='black' width='12' x='165' y='2672.2' />
@@ -24,9 +24,9 @@
   <rect fill='blue' height='0.9' stroke='black' width='12' x='180' y='2671.7' />
   <text x='180' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 180,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Linux (s390x)" (9)</text>
   <rect fill='blue' height='1.5' stroke='black' width='12' x='195' y='2671.1' />
-  <text x='195' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 195,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Mac OS X (ppc)" (15)</text>
+  <text x='195' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 195,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Linux (arm)" (15)</text>
   <rect fill='blue' height='1.5' stroke='black' width='12' x='210' y='2671.1' />
-  <text x='210' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 210,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Linux (arm)" (15)</text>
+  <text x='210' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 210,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Mac OS X (ppc)" (15)</text>
   <rect fill='blue' height='2' stroke='black' width='12' x='225' y='2670.6' />
   <text x='225' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 225,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"HP-UX (IA64W)" (20)</text>
   <rect fill='blue' height='2.1' stroke='black' width='12' x='240' y='2670.5' />
@@ -62,9 +62,9 @@
   <rect fill='blue' height='13.5' stroke='black' width='12' x='465' y='2659.1' />
   <text x='465' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 465,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"FreeBSD (amd64)" (135)</text>
   <rect fill='blue' height='15.7' stroke='black' width='12' x='480' y='2656.9' />
-  <text x='480' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 480,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Mac OS X (i386)" (157)</text>
+  <text x='480' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 480,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"AIX (ppc64)" (157)</text>
   <rect fill='blue' height='15.7' stroke='black' width='12' x='495' y='2656.9' />
-  <text x='495' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 495,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"AIX (ppc64)" (157)</text>
+  <text x='495' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 495,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"Mac OS X (i386)" (157)</text>
   <rect fill='blue' height='18.8' stroke='black' width='12' x='510' y='2653.8' />
   <text x='510' y='2677.6' font-family='Tahoma' font-size='12' transform='rotate(90 510,2677.6)' text-rendering='optimizeSpeed' fill='#000000;'>"AIX (ppc)" (188)</text>
   <rect fill='blue' height='40.7' stroke='black' width='12' x='525' y='2631.9' />

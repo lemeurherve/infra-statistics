@@ -1,15 +1,25 @@
 {
     "name": "file-operations",
     "installations": {
-        "1459468800000": 6
+        "1459468800000": 6,
+        "1462060800000": 18
     },
     "installationsPercentage": {
-        "1459468800000": 0.004862591274890389
+        "1459468800000": 0.004862591274890389,
+        "1462060800000": 0.01381639545594105
     },
     "installationsPerVersion": {
-        "1.0": 6
+        "1.0": 14,
+        "1.0-SNAPSHOT (private)": 1,
+        "1.1": 1,
+        "1.1-SNAPSHOT (private)": 1,
+        "1.2-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.0": 0.004862591274890389
+        "1.0": 0.010746085354620816,
+        "1.0-SNAPSHOT (private)": 7.675775253300583E-4,
+        "1.1": 7.675775253300583E-4,
+        "1.1-SNAPSHOT (private)": 7.675775253300583E-4,
+        "1.2-SNAPSHOT (private)": 7.675775253300583E-4
     }
 }

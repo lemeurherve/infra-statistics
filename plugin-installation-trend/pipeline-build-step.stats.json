@@ -1,17 +1,19 @@
 {
     "name": "pipeline-build-step",
     "installations": {
-        "1459468800000": 8200
+        "1459468800000": 8200,
+        "1462060800000": 22707
     },
     "installationsPercentage": {
-        "1459468800000": 6.645541409016865
+        "1459468800000": 6.645541409016865,
+        "1462060800000": 17.429382867669634
     },
     "installationsPerVersion": {
-        "2.0": 8197,
-        "2.1-SNAPSHOT (private)": 3
+        "2.0": 22706,
+        "2.1-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "2.0": 6.64311011337942,
-        "2.1-SNAPSHOT (private)": 0.0024312956374451947
+        "2.0": 17.428615290144304,
+        "2.1-SNAPSHOT (private)": 7.675775253300583E-4
     }
 }

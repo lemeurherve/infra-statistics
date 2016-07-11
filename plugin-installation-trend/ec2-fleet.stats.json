@@ -1,19 +1,19 @@
 {
     "name": "ec2-fleet",
     "installations": {
-        "1462060800000": 3
+        "1462060800000": 3,
+        "1464739200000": 59
     },
     "installationsPercentage": {
-        "1462060800000": 0.002302732575990175
+        "1462060800000": 0.002302732575990175,
+        "1464739200000": 0.043357486147650615
     },
     "installationsPerVersion": {
-        "1.0": 1,
-        "1.1-SNAPSHOT (private)": 1,
+        "1.0": 58,
         "1.1.4-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.0": 7.675775253300583E-4,
-        "1.1-SNAPSHOT (private)": 7.675775253300583E-4,
-        "1.1.4-SNAPSHOT (private)": 7.675775253300583E-4
+        "1.0": 0.042622613501080264,
+        "1.1.4-SNAPSHOT (private)": 7.348726465703494E-4
     }
 }

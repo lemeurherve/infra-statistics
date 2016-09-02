@@ -1,17 +1,19 @@
 {
     "name": "one-shot-executor",
     "installations": {
-        "1467331200000": 3
+        "1467331200000": 3,
+        "1470009600000": 22
     },
     "installationsPercentage": {
-        "1467331200000": 0.002495528844154224
+        "1467331200000": 0.002495528844154224,
+        "1470009600000": 0.016640193631344075
     },
     "installationsPerVersion": {
-        "1.0": 2,
+        "1.0": 21,
         "1.0-beta-2-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.0": 0.0016636858961028157,
-        "1.0-beta-2-SNAPSHOT (private)": 8.318429480514078E-4
+        "1.0": 0.015883821193555706,
+        "1.0-beta-2-SNAPSHOT (private)": 7.56372437788367E-4
     }
 }

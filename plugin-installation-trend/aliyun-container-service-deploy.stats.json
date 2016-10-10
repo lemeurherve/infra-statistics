@@ -1,15 +1,19 @@
 {
     "name": "aliyun-container-service-deploy",
     "installations": {
-        "1470009600000": 6
+        "1470009600000": 6,
+        "1472688000000": 13
     },
     "installationsPercentage": {
-        "1470009600000": 0.004538234626730202
+        "1470009600000": 0.004538234626730202,
+        "1472688000000": 0.009737463016366429
     },
     "installationsPerVersion": {
-        "0.1.0": 6
+        "0.1.0": 12,
+        "0.1.1-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "0.1.0": 0.004538234626730202
+        "0.1.0": 0.008988427399722857,
+        "0.1.1-SNAPSHOT (private)": 7.490356166435714E-4
     }
 }

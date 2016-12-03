@@ -1,17 +1,19 @@
 {
     "name": "slack-uploader",
     "installations": {
-        "1475280000000": 72
+        "1475280000000": 72,
+        "1477958400000": 201
     },
     "installationsPercentage": {
-        "1475280000000": 0.05423769670581323
+        "1475280000000": 0.05423769670581323,
+        "1477958400000": 0.1472322533859756
     },
     "installationsPerVersion": {
-        "1.7": 71,
+        "1.7": 200,
         "1.8-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.7": 0.053484395362676934,
-        "1.8-SNAPSHOT (private)": 7.533013431362948E-4
+        "1.7": 0.146499754612911,
+        "1.8-SNAPSHOT (private)": 7.324987730645551E-4
     }
 }

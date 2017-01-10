@@ -1,17 +1,19 @@
 {
     "name": "security-inspector",
     "installations": {
-        "1477958400000": 2
+        "1477958400000": 2,
+        "1480550400000": 12
     },
     "installationsPercentage": {
-        "1477958400000": 0.0014649975461291103
+        "1477958400000": 0.0014649975461291103,
+        "1480550400000": 0.00897290183645391
     },
     "installationsPerVersion": {
-        "0.1": 1,
-        "0.1-SNAPSHOT (private)": 1
+        "0.1": 11,
+        "0.2-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "0.1": 7.324987730645551E-4,
-        "0.1-SNAPSHOT (private)": 7.324987730645551E-4
+        "0.1": 0.008225160016749417,
+        "0.2-SNAPSHOT (private)": 7.477418197044924E-4
     }
 }

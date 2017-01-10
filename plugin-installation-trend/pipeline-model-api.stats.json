@@ -1,23 +1,29 @@
 {
     "name": "pipeline-model-api",
     "installations": {
-        "1477958400000": 2433
+        "1477958400000": 2433,
+        "1480550400000": 4641
     },
     "installationsPercentage": {
-        "1477958400000": 1.7821695148660626
+        "1477958400000": 1.7821695148660626,
+        "1480550400000": 3.4702697852485493
     },
     "installationsPerVersion": {
-        "0.5": 957,
-        "0.6": 1473,
-        "0.6-SNAPSHOT (private)": 1,
-        "0.6-synthetic-stage-SNAPSHOT (private)": 1,
-        "0.7-synthetic-stage-SNAPSHOT (private)": 1
+        "0.5": 353,
+        "0.5-SNAPSHOT (private)": 2,
+        "0.6": 1753,
+        "0.7": 8,
+        "0.7-synthetic-stage-SNAPSHOT (private)": 1,
+        "0.7.1": 2523,
+        "0.8-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "0.5": 0.7010013258227793,
-        "0.6": 1.0789706927240896,
-        "0.6-SNAPSHOT (private)": 7.324987730645551E-4,
-        "0.6-synthetic-stage-SNAPSHOT (private)": 7.324987730645551E-4,
-        "0.7-synthetic-stage-SNAPSHOT (private)": 7.324987730645551E-4
+        "0.5": 0.2639528623556858,
+        "0.5-SNAPSHOT (private)": 0.0014954836394089849,
+        "0.6": 1.3107914099419753,
+        "0.7": 0.0059819345576359395,
+        "0.7-synthetic-stage-SNAPSHOT (private)": 7.477418197044924E-4,
+        "0.7.1": 1.8865526111144344,
+        "0.8-SNAPSHOT (private)": 7.477418197044924E-4
     }
 }

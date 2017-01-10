@@ -1,23 +1,27 @@
 {
     "name": "pipeline-model-declarative-agent",
     "installations": {
-        "1477958400000": 2425
+        "1477958400000": 2425,
+        "1480550400000": 4626
     },
     "installationsPercentage": {
-        "1477958400000": 1.7763095246815461
+        "1477958400000": 1.7763095246815461,
+        "1480550400000": 3.459053657952982
     },
     "installationsPerVersion": {
-        "0.5": 952,
-        "0.6": 1470,
-        "0.6-SNAPSHOT (private)": 1,
-        "0.6-synthetic-stage-SNAPSHOT (private)": 1,
-        "0.7-synthetic-stage-SNAPSHOT (private)": 1
+        "0.5": 351,
+        "0.6": 1750,
+        "0.7": 8,
+        "0.7-synthetic-stage-SNAPSHOT (private)": 1,
+        "0.7.1": 2515,
+        "0.8-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "0.5": 0.6973388319574565,
-        "0.6": 1.076773196404896,
-        "0.6-SNAPSHOT (private)": 7.324987730645551E-4,
-        "0.6-synthetic-stage-SNAPSHOT (private)": 7.324987730645551E-4,
-        "0.7-synthetic-stage-SNAPSHOT (private)": 7.324987730645551E-4
+        "0.5": 0.26245737871627683,
+        "0.6": 1.3085481844828617,
+        "0.7": 0.0059819345576359395,
+        "0.7-synthetic-stage-SNAPSHOT (private)": 7.477418197044924E-4,
+        "0.7.1": 1.8805706765567984,
+        "0.8-SNAPSHOT (private)": 7.477418197044924E-4
     }
 }

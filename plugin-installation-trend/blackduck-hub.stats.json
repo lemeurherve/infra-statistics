@@ -1,19 +1,21 @@
 {
     "name": "blackduck-hub",
     "installations": {
-        "1480550400000": 14
+        "1480550400000": 14,
+        "1483228800000": 33
     },
     "installationsPercentage": {
-        "1480550400000": 0.010468385475862894
+        "1480550400000": 0.010468385475862894,
+        "1483228800000": 0.023407077449054143
     },
     "installationsPerVersion": {
         "1.5.5-SNAPSHOT (private)": 1,
-        "2.0.0": 10,
-        "2.0.1-SNAPSHOT (private)": 3
+        "2.0.0": 30,
+        "2.1.0-SNAPSHOT (private)": 2
     },
     "installationsPercentagePerVersion": {
-        "1.5.5-SNAPSHOT (private)": 7.477418197044924E-4,
-        "2.0.0": 0.007477418197044924,
-        "2.0.1-SNAPSHOT (private)": 0.0022432254591134774
+        "1.5.5-SNAPSHOT (private)": 7.093053772440649E-4,
+        "2.0.0": 0.021279161317321948,
+        "2.1.0-SNAPSHOT (private)": 0.0014186107544881298
     }
 }

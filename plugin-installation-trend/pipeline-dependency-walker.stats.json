@@ -1,15 +1,19 @@
 {
     "name": "pipeline-dependency-walker",
     "installations": {
-        "1488326400000": 14
+        "1488326400000": 14,
+        "1491004800000": 87
     },
     "installationsPercentage": {
-        "1488326400000": 0.009326493904470056
+        "1488326400000": 0.009326493904470056,
+        "1491004800000": 0.06036175423746453
     },
     "installationsPerVersion": {
-        "1.0.0": 14
+        "1.0.0": 85,
+        "1.0.1-SNAPSHOT (private)": 2
     },
     "installationsPercentagePerVersion": {
-        "1.0.0": 0.009326493904470056
+        "1.0.0": 0.05897412770326994,
+        "1.0.1-SNAPSHOT (private)": 0.0013876265341945869
     }
 }

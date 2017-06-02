@@ -1,15 +1,19 @@
 {
     "name": "views-containing-job",
     "installations": {
-        "1491004800000": 5
+        "1491004800000": 5,
+        "1493596800000": 8
     },
     "installationsPercentage": {
-        "1491004800000": 0.003469066335486467
+        "1491004800000": 0.003469066335486467,
+        "1493596800000": 0.005303105631235292
     },
     "installationsPerVersion": {
-        "1.0": 5
+        "1.0": 7,
+        "1.0.1-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.0": 0.003469066335486467
+        "1.0": 0.004640217427330881,
+        "1.0.1-SNAPSHOT (private)": 6.628882039044115E-4
     }
 }

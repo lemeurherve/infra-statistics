@@ -1,0 +1,23 @@
+{
+    "name": "sonar-quality-gates",
+    "installations": {
+        "1493596800000": 100
+    },
+    "installationsPercentage": {
+        "1493596800000": 0.06628882039044115
+    },
+    "installationsPerVersion": {
+        "1.0-SNAPSHOT-5": 1,
+        "1.0-SNAPSHOT-7": 1,
+        "1.0.3": 1,
+        "1.0.4": 96,
+        "1.0.5-SNAPSHOT (private)": 1
+    },
+    "installationsPercentagePerVersion": {
+        "1.0-SNAPSHOT-5": 6.628882039044115E-4,
+        "1.0-SNAPSHOT-7": 6.628882039044115E-4,
+        "1.0.3": 6.628882039044115E-4,
+        "1.0.4": 0.0636372675748235,
+        "1.0.5-SNAPSHOT (private)": 6.628882039044115E-4
+    }
+}

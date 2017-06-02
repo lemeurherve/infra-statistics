@@ -38,7 +38,8 @@
         "1459468800000": 133,
         "1462060800000": 134,
         "1488326400000": 150,
-        "1491004800000": 153
+        "1491004800000": 153,
+        "1493596800000": 158
     },
     "installationsPercentage": {
         "1370044800000": 0.04412592626405563,
@@ -78,24 +79,29 @@
         "1459468800000": 0.10778743992673696,
         "1462060800000": 0.10285538839422782,
         "1488326400000": 0.0999267204050363,
-        "1491004800000": 0.1061534298658859
+        "1491004800000": 0.1061534298658859,
+        "1493596800000": 0.10473633621689701
     },
     "installationsPerVersion": {
         "0.1-SNAPSHOT (private)": 4,
-        "0.2": 126,
-        "0.3-SNAPSHOT (private)": 6,
+        "0.2": 127,
+        "0.3-SNAPSHOT (private)": 5,
         "0.7-SNAPSHOT (private)": 1,
-        "1.22-SNAPSHOT (private)": 6,
-        "1.3-SNAPSHOT (private)": 6,
-        "1.3.3-SNAPSHOT (private)": 4
+        "1.2-SNAPSHOT (private)": 1,
+        "1.22-SNAPSHOT (private)": 9,
+        "1.3-SNAPSHOT (private)": 5,
+        "1.3.3-SNAPSHOT (private)": 5,
+        "1.3.4-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "0.1-SNAPSHOT (private)": 0.0027752530683891738,
-        "0.2": 0.08742047165425897,
-        "0.3-SNAPSHOT (private)": 0.00416287960258376,
-        "0.7-SNAPSHOT (private)": 6.938132670972934E-4,
-        "1.22-SNAPSHOT (private)": 0.00416287960258376,
-        "1.3-SNAPSHOT (private)": 0.00416287960258376,
-        "1.3.3-SNAPSHOT (private)": 0.0027752530683891738
+        "0.1-SNAPSHOT (private)": 0.002651552815617646,
+        "0.2": 0.08418680189586027,
+        "0.3-SNAPSHOT (private)": 0.0033144410195220576,
+        "0.7-SNAPSHOT (private)": 6.628882039044115E-4,
+        "1.2-SNAPSHOT (private)": 6.628882039044115E-4,
+        "1.22-SNAPSHOT (private)": 0.005965993835139704,
+        "1.3-SNAPSHOT (private)": 0.0033144410195220576,
+        "1.3.3-SNAPSHOT (private)": 0.0033144410195220576,
+        "1.3.4-SNAPSHOT (private)": 6.628882039044115E-4
     }
 }

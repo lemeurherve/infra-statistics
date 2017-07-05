@@ -11,48 +11,51 @@ final String USAGE_HOST  = 'usage.jenkins.io'
 final String CENSUS_HOST = 'census.jenkins.io'
 final boolean isPRTest = !infra.isTrusted() && env.BRANCH_NAME
 
-if (!infra.isTrusted()) {
-    echo 'TODO: Implement viable pull request validation code here :)'
-}
-else {
+String nodeLabel = 'linux'
+
+if (!isPRTest) {
     // Make sure we run this job once a month (at 3am on the 2nd of the month) when the raw stats are available.
     properties([pipelineTriggers([cron('0 3 2 * *')])])
     /* `census` is a node label for a single machine, ideally, which will be
-    * consistently used for processing usage statistics and generating census data
-    */
-    node('census') {
-        /* grab our code from source control */
-        checkout scm
+     * consistently used for processing usage statistics and generating census data
+     */
+    nodeLabel = 'census'
+}
 
-        String javaHome = tool(name: 'jdk8')
-        String groovyHome = tool(name: 'groovy')
+node(nodeLabel) {
+    /* grab our code from source control */
+    checkout scm
 
-        List<String> customEnv = [
-            "PATH+JDK=${javaHome}/bin",
-            "PATH+GROOVY=${groovyHome}/bin",
-            "JAVA_HOME=${javaHome}",
-        ]
+    String javaHome = tool(name: 'jdk8')
+    String groovyHome = tool(name: 'groovy')
 
-        String usagestats_dir = './usage-stats'
-        String census_dir = './census'
-        String mongoDataDir = "mongo-data"
+    List<String> customEnv = [
+        "PATH+JDK=${javaHome}/bin",
+        "PATH+GROOVY=${groovyHome}/bin",
+        "JAVA_HOME=${javaHome}",
+    ]
 
-        if (isPRTest) {
-            // If we're running for a PR build, use a fresh testing directory and nuke whatever was there previously.
-            sh "rm -rf testing"
-            sh "mkdir -p testing/census"
-            sh "cd testing && tar -xvzf ../test-data/usage.tar.gz ."
-            usagestats_dir = './testing/usage'
-            census_dir = './testing/census'
-            mongoDataDir = "testing/mongo-data"
-        }
-        stage 'Sync raw data and census files'
-        if (infra.isTrusted()) {
+    String usagestats_dir = './usage-stats'
+    String census_dir = './census'
+    String mongoDataDir = "mongo-data"
+
+    if (isPRTest) {
+        // If we're running for a PR build, use a fresh testing directory and nuke whatever was there previously.
+        sh "rm -rf testing"
+        sh "mkdir -p testing/census"
+        sh "cd testing && tar -xvzf ../test-data/usage.tar.gz ."
+        usagestats_dir = './testing/usage'
+        census_dir = './testing/census'
+        mongoDataDir = "testing/mongo-data"
+    }
+    else {
+        stage('Sync raw data and census files') {
             sh "rsync -avz --delete ${USAGE_HOST}:/srv/usage/usage-stats ."
             sh "rsync -avz --delete ${CENSUS_HOST}:/srv/census/census ."
         }
+    }
 
-        stage 'Process raw logs'
+    stage('Process raw logs') {
         // TODO: Fix ownership!
         // The mongo-data directory will end up containing files and dirs owned by 999:docker that we can't do much about for the moment.
         // Needs a better fix going forward, but for the moment...
@@ -64,40 +67,46 @@ else {
                 sh "groovy parseUsage.groovy --logs ${usagestats_dir} --output ${census_dir} --incremental"
             }
         }
+    }
 
-        if (isPRTest) {
-            // Make sure the expected files exist.
-            sh "test -f ${pwd()}/testing/census/201103.json.gz"
-            sh "test -f ${pwd()}/testing/census/201104.json.gz"
-            sh "test -f ${pwd()}/testing/census/201105.json.gz"
-        }
+    if (isPRTest) {
+        // Make sure the expected files exist.
+        sh "test -f ${pwd()}/testing/census/201103.json.gz"
+        sh "test -f ${pwd()}/testing/census/201104.json.gz"
+        sh "test -f ${pwd()}/testing/census/201105.json.gz"
+    }
 
-        stage 'Generate census data'
+    stage('Generate census data') {
         withEnv(customEnv) {
             sh 'mkdir -p target'
             sh "groovy collectNumbers.groovy ${census_dir}/*.json.gz"
             sh 'groovy createJson.groovy'
         }
+    }
 
-        stage 'Generate stats'
+    stage('Generate stats') {
         withEnv(customEnv) {
             sh "groovy generateStats.groovy ${census_dir}/*.json.gz"
         }
+    }
 
-        if (infra.isTrusted() && (!env.BRANCH_NAME)) {
-            stage 'Publish census'
+    if (isPRTest) {
+        stage('Archive artifacts') {
+            archiveArtifacts 'target/svg/*, target/stats/*'
+        }
+    }
+    else {
+        stage('Publish census') {
             sh "rsync -avz ${census_dir} ${CENSUS_HOST}:/srv/census"
+        }
 
-            stage 'Publish stats'
+        stage('Publish stats') {
             try {
                 sh './publish-svgs.sh'
             }
             finally {
                 sh 'git checkout master'
             }
-        } else {
-            stage 'Archive artifacts'
-            archiveArtifacts 'target/svg/*, target/stats/*'
         }
     }
 }

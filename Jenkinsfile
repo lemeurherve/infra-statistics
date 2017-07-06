@@ -39,18 +39,18 @@ node(nodeLabel) {
     String census_dir = './census'
     String mongoDataDir = "mongo-data"
 
-    if (isPRTest) {
-        usagestats_dir = './testing/usage'
-        census_dir = './testing/census'
-        mongoDataDir = 'testing/mongo-data'
+    stage('Sync raw data and census files') {
+        if (isPRTest) {
+            usagestats_dir = './testing/usage'
+            census_dir = './testing/census'
+            mongoDataDir = 'testing/mongo-data'
 
-        // If we're running for a PR build, use a fresh testing directory and nuke whatever was there previously.
-        sh "rm -rf testing"
-        sh "mkdir -p ${usagestats_dir} ${census_dir}"
-        sh "cd testing && tar -xvzf ../test-data/usage.tar.gz ."
-    }
-    else {
-        stage('Sync raw data and census files') {
+            // If we're running for a PR build, use a fresh testing directory and nuke whatever was there previously.
+            sh "rm -rf testing"
+            sh "mkdir -p ${usagestats_dir} ${census_dir}"
+            sh "cd testing && tar -xvzf ../test-data/usage.tar.gz"
+        }
+        else {
             sh "rsync -avz --delete ${USAGE_HOST}:/srv/usage/usage-stats ."
             sh "rsync -avz --delete ${CENSUS_HOST}:/srv/census/census ."
         }

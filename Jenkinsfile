@@ -40,13 +40,14 @@ node(nodeLabel) {
     String mongoDataDir = "mongo-data"
 
     if (isPRTest) {
-        // If we're running for a PR build, use a fresh testing directory and nuke whatever was there previously.
-        sh "rm -rf testing"
-        sh "mkdir -p testing/census"
-        sh "cd testing && tar -xvzf ../test-data/usage.tar.gz ."
         usagestats_dir = './testing/usage'
         census_dir = './testing/census'
-        mongoDataDir = "testing/mongo-data"
+        mongoDataDir = 'testing/mongo-data'
+
+        // If we're running for a PR build, use a fresh testing directory and nuke whatever was there previously.
+        sh "rm -rf testing"
+        sh "mkdir -p ${usagestats_dir} ${census_dir}"
+        sh "cd testing && tar -xvzf ../test-data/usage.tar.gz ."
     }
     else {
         stage('Sync raw data and census files') {

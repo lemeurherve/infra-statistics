@@ -1,15 +1,19 @@
 {
     "name": "customized-build-message",
     "installations": {
-        "1493596800000": 11
+        "1493596800000": 11,
+        "1496275200000": 24
     },
     "installationsPercentage": {
-        "1493596800000": 0.007291770242948527
+        "1493596800000": 0.007291770242948527,
+        "1496275200000": 0.015910477049136857
     },
     "installationsPerVersion": {
-        "1.0": 11
+        "1.0": 23,
+        "1.1-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.0": 0.007291770242948527
+        "1.0": 0.01524754050542282,
+        "1.1-SNAPSHOT (private)": 6.629365437140357E-4
     }
 }

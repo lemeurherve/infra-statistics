@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Plugin and Core Version Matrix for the maven-release-cascade Plugin</title>
+        <style type="text/css">
+body, table {
+    font-family: monospace;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid #FF0000;
+}
+
+table td, table th {
+    border: 1px solid #FF0000;
+    text-align: center;
+    padding: 3px;
+}
+tr.lts {
+    background-color: #eef;
+}
+td.subtotal {
+    background-color: #ccc;
+}
+        </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+$(document).ready(function() {
+
+    var versionData = {"1.3.2":{"1.521":1,"1.525":1,"1.532.1":2,"1.541":1,"1.547":1,"1.549":1,"1.551":1,"1.554.3":1,"1.558":1,"1.559":1,"1.564":1,"1.570":2,"1.573":1,"1.577":1,"1.580":1,"1.580.2":1,"1.580.3":1,"1.583":1,"1.585":1,"1.590":2,"1.591":1,"1.596":2,"1.596.1":1,"1.596.2":1,"1.599":1,"1.606":2,"1.607":1,"1.609.1":1,"1.609.3":4,"1.612":1,"1.614":1,"1.615":1,"1.617":4,"1.618":1,"1.619":2,"1.620":4,"1.623":1,"1.625.2":1,"1.625.3":2,"1.627":1,"1.628":1,"1.630":2,"1.631":1,"1.632":1,"1.633":1,"1.634":1,"1.636":1,"1.638":2,"1.639":1,"1.641":1,"1.642":2,"1.642.1":1,"1.642.4":3,"1.643":7,"1.644":2,"1.651.1":8,"1.651.2":5,"1.651.3":11,"1.653":1,"1.655":2,"1.656":5,"1.658":12,"2.0":4,"2.1":3,"2.10":3,"2.11":3,"2.12":3,"2.13":3,"2.14":4,"2.15":1,"2.16":1,"2.17":4,"2.18":1,"2.19":3,"2.19.1":18,"2.19.2":3,"2.19.3":7,"2.19.4":18,"2.19.4.2-rolling":6,"2.2":1,"2.20":3,"2.21":3,"2.22":2,"2.23":3,"2.25":2,"2.27":4,"2.3":1,"2.30":2,"2.32.1":25,"2.32.2":7,"2.32.3":24,"2.34":2,"2.35":2,"2.36":3,"2.37":5,"2.38":2,"2.39":5,"2.40":4,"2.41":3,"2.42":1,"2.43":1,"2.44":1,"2.45":3,"2.46":3,"2.46.1":20,"2.46.2":56,"2.46.3":97,"2.46.3.2":1,"2.47":6,"2.48":7,"2.49":3,"2.5":1,"2.50":3,"2.51":7,"2.52":4,"2.53":8,"2.54":8,"2.55":6,"2.56":3,"2.57":3,"2.58":1,"2.59":1,"2.6":1,"2.60":1,"2.60.1":25,"2.61":14,"2.62":8,"2.63":14,"2.64":21,"2.65":22,"2.66":27,"2.67":18,"2.7":4,"2.7.1":11,"2.7.2":15,"2.7.3":4,"2.7.4":14,"2.8":6,"2.9":4}};
+
+    var pluginVersionsSet = new Set();
+
+    var coreVersionsSet = new Set();
+
+    var totalInstallsPerPluginVersion = new Map();
+
+    var totalInstalls = 0
+
+    for (var pluginVersion in versionData) {
+        if (/^\d[\d.]*\d$/.test(pluginVersion)) {
+            pluginVersionsSet.add(pluginVersion);
+            if (!totalInstallsPerPluginVersion.has(pluginVersion)) {
+                totalInstallsPerPluginVersion[pluginVersion] = 0;
+            }
+            for (var coreVersion in versionData[pluginVersion]) {
+                if (/^[12][.]\d+(|[.]\d)$/.test(coreVersion)) {
+                    coreVersionsSet.add(coreVersion);
+                    totalInstalls += versionData[pluginVersion][coreVersion];
+                    totalInstallsPerPluginVersion[pluginVersion] += versionData[pluginVersion][coreVersion];
+                }
+            }
+        }
+    }
+
+    var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
+
+    var pluginVersions = Array.from(pluginVersionsSet);
+    pluginVersions.sort(collator.compare);
+
+    var coreVersions = Array.from(coreVersionsSet);
+    coreVersions.sort(collator.compare);
+
+    var thisCoreVersionOrOlderPerPluginVersion = {};
+
+    // header row
+    var row = $("<tr>");
+    row.append($("<th>").html("maven-release-cascade - " + totalInstalls));
+    for (let pluginVersion of pluginVersions) {
+        row.append($("<th>").html(pluginVersion));
+        thisCoreVersionOrOlderPerPluginVersion[pluginVersion] = 0;
+    }
+    row.append($("<th>").html("Sum"));
+    row.appendTo('#versionsContainer');
+
+
+    var thisCoreVersionOrOlder = 0
+
+    // value rows
+    for (let coreVersion of coreVersions) {
+        var row = $("<tr>");
+        if (/^\d[.]\d+[.]\d$/.test(coreVersion)) {
+            row.addClass('lts');
+        }
+        row.append($("<th>").html(coreVersion));
+        var thisCoreVersion = 0;
+        for (let pluginVersion of pluginVersions) {
+            var cnt = versionData[pluginVersion][coreVersion];
+            if (cnt == null) {
+                cnt = 0;
+            }
+            thisCoreVersion += cnt;
+            var title = pluginVersion + " on " + coreVersion + ": " + cnt + " installs (" + Math.round(cnt/totalInstalls*100) + "%)";
+            title += " - " + Math.round((1-thisCoreVersionOrOlderPerPluginVersion[pluginVersion]/totalInstallsPerPluginVersion[pluginVersion])*100) + "% of " + pluginVersion + " installs are on this core version or newer";
+            row.append($("<td>").attr("title", title).css("opacity", Math.max(0.1, cnt*100/totalInstalls)).html(cnt));
+
+            thisCoreVersionOrOlderPerPluginVersion[pluginVersion] += cnt;
+        }
+
+        var title = coreVersion + " total: " + thisCoreVersion + " installs (" + Math.round(thisCoreVersion/totalInstalls*100) + "%)";
+        title += " - " + Math.round((1-thisCoreVersionOrOlder/totalInstalls)*100) + "% of plugin installs are on this core version or newer";
+        row.append($("<td>").addClass("subtotal").attr("title", title).html(thisCoreVersion));
+
+        thisCoreVersionOrOlder += thisCoreVersion;
+
+        row.appendTo('#versionsContainer');
+    }
+});
+        </script>
+    </head>
+    <body>
+        <table id="versionsContainer"></table>
+    </body>
+</html>

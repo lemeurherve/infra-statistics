@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Plugin and Core Version Matrix for the blueocean-pipeline-editor Plugin</title>
+        <style type="text/css">
+body, table {
+    font-family: monospace;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid #FF0000;
+}
+
+table td, table th {
+    border: 1px solid #FF0000;
+    text-align: center;
+    padding: 3px;
+}
+tr.lts {
+    background-color: #eef;
+}
+td.subtotal {
+    background-color: #ccc;
+}
+        </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+$(document).ready(function() {
+
+    var versionData = {"1.0-alpha-4":{"2.14":2,"2.19":1,"2.19.1":1,"2.19.2":1,"2.27":1,"2.28":1,"2.32.2.1-rolling":1,"2.32.3":3,"2.33":1,"2.40":1,"2.41":1,"2.45":2,"2.46.1":5,"2.46.2":12,"2.46.3":4,"2.47":3,"2.49":2,"2.50":1,"2.52":4,"2.53":2,"2.54":2,"2.55":1,"2.56":2,"2.57":2,"2.58":4,"2.60":2,"2.60.1":4,"2.61":8,"2.62":5,"2.63":7,"2.64":17,"2.65":8,"2.66":20,"2.67":33,"2.7.1":1,"2.7.2":2,"2.8":1},"1.0-alpha-3":{"2.19.2":1},"0.2.0":{"1.658":1,"2.10":4,"2.11":2,"2.12":3,"2.13":2,"2.14":3,"2.15":2,"2.16":9,"2.17":6,"2.19":6,"2.19.1":40,"2.19.2":29,"2.19.3":32,"2.19.4":94,"2.20":5,"2.21":3,"2.22":1,"2.23":10,"2.24":6,"2.25":7,"2.26":3,"2.27":6,"2.28":4,"2.30":4,"2.31":3,"2.32":12,"2.32.1":79,"2.32.1.1-rolling":3,"2.32.2":124,"2.32.2.1-rolling":2,"2.32.2.6-rolling":1,"2.32.2.7-rolling":1,"2.32.3":248,"2.32.3.1":1,"2.32.3.2":1,"2.33":8,"2.34":10,"2.35":16,"2.36":11,"2.37":10,"2.38":10,"2.39":12,"2.40":10,"2.41":12,"2.42":9,"2.43":2,"2.44":7,"2.45":23,"2.46":27,"2.46.1":529,"2.46.2":1488,"2.46.2.1":82,"2.46.3":2296,"2.46.3.2":90,"2.47":20,"2.48":27,"2.49":31,"2.50":28,"2.51":44,"2.52":76,"2.53":134,"2.54":47,"2.55":44,"2.56":44,"2.57":71,"2.58":105,"2.59":62,"2.60":105,"2.60.1":1164,"2.60.1.1":14,"2.61":194,"2.62":215,"2.63":306,"2.64":486,"2.65":422,"2.66":619,"2.67":741,"2.7":4,"2.7.1":28,"2.7.2":14,"2.7.3":24,"2.7.4":103,"2.8":12,"2.9":22},"0.2-rc1":{"2.19.1":3,"2.19.2":3,"2.19.3":1,"2.19.4":5,"2.22":1,"2.26":1,"2.32.1":6,"2.32.2":9,"2.32.3":37,"2.32.3.1":6,"2.32.3.2":3,"2.35":2,"2.39":1,"2.40":1,"2.43":1,"2.46":2,"2.46.1":3,"2.46.2":7,"2.46.3":8,"2.47":3,"2.48":6,"2.49":3,"2.50":13,"2.51":11,"2.52":2,"2.53":2,"2.59":1,"2.60":1,"2.60.1":4,"2.61":1,"2.62":2,"2.63":2,"2.66":2,"2.67":3,"2.7.1":1,"2.7.4":2,"2.9":1},"0.1-preview-4":{"2.10":1,"2.19.1":10,"2.19.2":2,"2.19.3":2,"2.19.4":4,"2.21":1,"2.22":2,"2.25":1,"2.26":1,"2.32":2,"2.32.1":10,"2.32.2":20,"2.32.2.7-rolling":2,"2.32.3":15,"2.34":1,"2.35":1,"2.38":1,"2.39":2,"2.40":1,"2.46":1,"2.46.1":3,"2.46.2":5,"2.46.3":6,"2.47":1,"2.48":4,"2.49":10,"2.50":5,"2.51":2,"2.52":3,"2.53":2,"2.55":1,"2.58":1,"2.60.1":3,"2.61":1,"2.62":1,"2.63":1,"2.64":1,"2.65":1,"2.67":1,"2.7.2":2,"2.7.4":5,"2.9":2},"0.1-preview-3":{"2.19.3":2,"2.19.4":1,"2.19.4.2-rolling":1,"2.28":1,"2.32.2.1-rolling":1,"2.7.2":2,"2.9":1},"0.1-preview-1":{"2.19.2":1,"2.32.1":1,"2.32.2":2,"2.66":1}};
+
+    var pluginVersionsSet = new Set();
+
+    var coreVersionsSet = new Set();
+
+    var totalInstallsPerPluginVersion = new Map();
+
+    var totalInstalls = 0
+
+    for (var pluginVersion in versionData) {
+        if (/^\d[\d.]*\d$/.test(pluginVersion)) {
+            pluginVersionsSet.add(pluginVersion);
+            if (!totalInstallsPerPluginVersion.has(pluginVersion)) {
+                totalInstallsPerPluginVersion[pluginVersion] = 0;
+            }
+            for (var coreVersion in versionData[pluginVersion]) {
+                if (/^[12][.]\d+(|[.]\d)$/.test(coreVersion)) {
+                    coreVersionsSet.add(coreVersion);
+                    totalInstalls += versionData[pluginVersion][coreVersion];
+                    totalInstallsPerPluginVersion[pluginVersion] += versionData[pluginVersion][coreVersion];
+                }
+            }
+        }
+    }
+
+    var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
+
+    var pluginVersions = Array.from(pluginVersionsSet);
+    pluginVersions.sort(collator.compare);
+
+    var coreVersions = Array.from(coreVersionsSet);
+    coreVersions.sort(collator.compare);
+
+    var thisCoreVersionOrOlderPerPluginVersion = {};
+
+    // header row
+    var row = $("<tr>");
+    row.append($("<th>").html("blueocean-pipeline-editor - " + totalInstalls));
+    for (let pluginVersion of pluginVersions) {
+        row.append($("<th>").html(pluginVersion));
+        thisCoreVersionOrOlderPerPluginVersion[pluginVersion] = 0;
+    }
+    row.append($("<th>").html("Sum"));
+    row.appendTo('#versionsContainer');
+
+
+    var thisCoreVersionOrOlder = 0
+
+    // value rows
+    for (let coreVersion of coreVersions) {
+        var row = $("<tr>");
+        if (/^\d[.]\d+[.]\d$/.test(coreVersion)) {
+            row.addClass('lts');
+        }
+        row.append($("<th>").html(coreVersion));
+        var thisCoreVersion = 0;
+        for (let pluginVersion of pluginVersions) {
+            var cnt = versionData[pluginVersion][coreVersion];
+            if (cnt == null) {
+                cnt = 0;
+            }
+            thisCoreVersion += cnt;
+            var title = pluginVersion + " on " + coreVersion + ": " + cnt + " installs (" + Math.round(cnt/totalInstalls*100) + "%)";
+            title += " - " + Math.round((1-thisCoreVersionOrOlderPerPluginVersion[pluginVersion]/totalInstallsPerPluginVersion[pluginVersion])*100) + "% of " + pluginVersion + " installs are on this core version or newer";
+            row.append($("<td>").attr("title", title).css("opacity", Math.max(0.1, cnt*100/totalInstalls)).html(cnt));
+
+            thisCoreVersionOrOlderPerPluginVersion[pluginVersion] += cnt;
+        }
+
+        var title = coreVersion + " total: " + thisCoreVersion + " installs (" + Math.round(thisCoreVersion/totalInstalls*100) + "%)";
+        title += " - " + Math.round((1-thisCoreVersionOrOlder/totalInstalls)*100) + "% of plugin installs are on this core version or newer";
+        row.append($("<td>").addClass("subtotal").attr("title", title).html(thisCoreVersion));
+
+        thisCoreVersionOrOlder += thisCoreVersion;
+
+        row.appendTo('#versionsContainer');
+    }
+});
+        </script>
+    </head>
+    <body>
+        <table id="versionsContainer"></table>
+    </body>
+</html>

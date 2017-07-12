@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Plugin and Core Version Matrix for the simple-theme-plugin Plugin</title>
+        <style type="text/css">
+body, table {
+    font-family: monospace;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid #FF0000;
+}
+
+table td, table th {
+    border: 1px solid #FF0000;
+    text-align: center;
+    padding: 3px;
+}
+tr.lts {
+    background-color: #eef;
+}
+td.subtotal {
+    background-color: #ccc;
+}
+        </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+$(document).ready(function() {
+
+    var versionData = {"0.3":{"1.424.2":1,"1.424.6":1,"1.461":6,"1.466":1,"1.472":2,"1.474":1,"1.478":1,"1.480.3":1,"1.484":1,"1.487":1,"1.489":1,"1.491":1,"1.492":1,"1.494":1,"1.495":1,"1.499":1,"1.500":1,"1.501":2,"1.505":3,"1.506":6,"1.507":2,"1.509.1":2,"1.509.2":4,"1.509.3":1,"1.509.4":2,"1.510":1,"1.511":1,"1.512":1,"1.514":5,"1.516":1,"1.517":1,"1.518":6,"1.520":1,"1.521":1,"1.522":7,"1.523":3,"1.524":1,"1.525":3,"1.526":5,"1.528":2,"1.529":3,"1.530":2,"1.531":1,"1.532":3,"1.532.1":6,"1.532.2":4,"1.532.3":3,"1.533":1,"1.534":5,"1.535":2,"1.537":4,"1.538":2,"1.539":5,"1.540":2,"1.542":7,"1.544":3,"1.545":4,"1.546":3,"1.547":5,"1.549":3,"1.550":4,"1.551":10,"1.552":4,"1.553":7,"1.554":2,"1.554.1":3,"1.554.2":7,"1.554.3":11,"1.555":3,"1.556":4,"1.557":6,"1.558":6,"1.559":6,"1.560":4,"1.561":5,"1.562":2,"1.563":8,"1.564":7,"1.565":5,"1.565.1":7,"1.565.2":37,"1.565.3":23,"1.566":7,"1.567":6,"1.568":9,"1.569":12,"1.570":100,"1.570-CIaaS":1,"1.571":7,"1.572":6,"1.573":2,"1.574":15,"1.575":7,"1.576":4,"1.577":13,"1.578":4,"1.579":6,"1.580":8,"1.580.1":15,"1.580.2":15,"1.580.3":30,"1.581":8,"1.582":7,"1.583":21,"1.584":5,"1.585":14,"1.586":6,"1.587":8,"1.588":24,"1.589":12,"1.590":11,"1.591":6,"1.592":8,"1.592.4":1,"1.593":15,"1.594":11,"1.595":11,"1.596":27,"1.596.1":10,"1.596.2":40,"1.596.2_2":1,"1.596.2_4":4,"1.596.3":18,"1.597":7,"1.598":35,"1.599":23,"1.600":5,"1.601":7,"1.602":9,"1.604":2,"1.605":10,"1.606":17,"1.607":15,"1.608":13,"1.609":20,"1.609.1":26,"1.609.2":29,"1.609.3":95,"1.610":14,"1.611":36,"1.612":15,"1.613":20,"1.614":24,"1.615":14,"1.616":15,"1.617":40,"1.618":19,"1.619":15,"1.620":34,"1.621":3,"1.622":17,"1.623":15,"1.624":42,"1.625":10,"1.625.1":15,"1.625.2":31,"1.625.3":69,"1.626":14,"1.627":26,"1.628":25,"1.629":11,"1.630":20,"1.631":24,"1.632":21,"1.633":13,"1.634":25,"1.635":23,"1.636":17,"1.637":9,"1.638":68,"1.639":24,"1.640":16,"1.641":13,"1.642":39,"1.642.1":54,"1.642.4":89,"1.643":66,"1.644":53,"1.644.FARFETCH.2":1,"1.651.1":97,"1.651.2":95,"1.651.3":227,"1.653":41,"1.654":29,"1.655":33,"1.656":116,"1.658":111,"2.0":40,"2.0-rc-1":2,"2.1":26,"2.10":32,"2.11":29,"2.12":13,"2.13":24,"2.14":22,"2.15":27,"2.16":26,"2.17":35,"2.18":19,"2.19":27,"2.19.1":162,"2.19.2":71,"2.19.3":92,"2.19.3.1-rolling":1,"2.19.4":178,"2.19.4.2-rolling":4,"2.2":22,"2.20":24,"2.21":19,"2.22":18,"2.23":79,"2.24":20,"2.25":16,"2.26":28,"2.27":43,"2.28":12,"2.29":5,"2.3":87,"2.30":22,"2.31":12,"2.32":35,"2.32.1":301,"2.32.1.1-rolling":2,"2.32.2":216,"2.32.2.1-rolling":7,"2.32.2.6":1,"2.32.2.6-rolling":6,"2.32.2.7-rolling":3,"2.32.3":441,"2.32.3-INFONOVA-1":1,"2.32.3.1":3,"2.32.3.2":15,"2.33":37,"2.34":30,"2.35":42,"2.36":32,"2.37":29,"2.38":26,"2.39":24,"2.4":8,"2.40":25,"2.41":39,"2.42":22,"2.43":13,"2.44":28,"2.45":54,"2.46":53,"2.46.1":300,"2.46.2":797,"2.46.2.1":15,"2.46.3":1183,"2.46.3.2":4,"2.47":55,"2.48":51,"2.49":51,"2.5":27,"2.50":45,"2.51":70,"2.52":96,"2.53":109,"2.54":39,"2.55":48,"2.56":25,"2.57":56,"2.58":89,"2.59":56,"2.6":35,"2.60":54,"2.60.1":566,"2.60.1.1":2,"2.61":153,"2.62":145,"2.63":184,"2.64":244,"2.65":241,"2.66":359,"2.67":471,"2.7":43,"2.7.1":110,"2.7.2":130,"2.7.2-continental":1,"2.7.20":6,"2.7.24.0.1":2,"2.7.24.0.2":2,"2.7.3":56,"2.7.4":236,"2.8":50,"2.9":42},"0.2":{"1.409.3":1,"1.456":2,"1.466.1":3,"1.467":1,"1.472":1,"1.473":1,"1.476":1,"1.478":1,"1.480.1":2,"1.481":1,"1.483":1,"1.484":1,"1.491":2,"1.492":1,"1.499":2,"1.500":1,"1.503":1,"1.505":1,"1.509":1,"1.514":1,"1.525":1,"1.526":2,"1.535":1,"1.542":1,"1.546":1,"1.553":1,"1.554.3":1,"1.559":1,"1.565":2,"1.565.3":2,"1.566":1,"1.575":1,"1.578":1,"1.580.3":4,"1.592":1,"1.596":1,"1.596.3":1,"1.602":2,"1.609.1":1,"1.609.2":1,"1.617":1,"1.625.3":1,"1.636":1,"1.642":5,"1.642.1":3,"1.642.4":1,"1.651.1":5,"1.651.2":1,"1.651.3":7,"1.653":1,"1.656":3,"1.658":1,"2.19.1":1,"2.19.4":1,"2.26":1,"2.32":1,"2.32.2":1,"2.32.3":1,"2.41":1,"2.46.1":1,"2.46.2":3,"2.46.3":4}};
+
+    var pluginVersionsSet = new Set();
+
+    var coreVersionsSet = new Set();
+
+    var totalInstallsPerPluginVersion = new Map();
+
+    var totalInstalls = 0
+
+    for (var pluginVersion in versionData) {
+        if (/^\d[\d.]*\d$/.test(pluginVersion)) {
+            pluginVersionsSet.add(pluginVersion);
+            if (!totalInstallsPerPluginVersion.has(pluginVersion)) {
+                totalInstallsPerPluginVersion[pluginVersion] = 0;
+            }
+            for (var coreVersion in versionData[pluginVersion]) {
+                if (/^[12][.]\d+(|[.]\d)$/.test(coreVersion)) {
+                    coreVersionsSet.add(coreVersion);
+                    totalInstalls += versionData[pluginVersion][coreVersion];
+                    totalInstallsPerPluginVersion[pluginVersion] += versionData[pluginVersion][coreVersion];
+                }
+            }
+        }
+    }
+
+    var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
+
+    var pluginVersions = Array.from(pluginVersionsSet);
+    pluginVersions.sort(collator.compare);
+
+    var coreVersions = Array.from(coreVersionsSet);
+    coreVersions.sort(collator.compare);
+
+    var thisCoreVersionOrOlderPerPluginVersion = {};
+
+    // header row
+    var row = $("<tr>");
+    row.append($("<th>").html("simple-theme-plugin - " + totalInstalls));
+    for (let pluginVersion of pluginVersions) {
+        row.append($("<th>").html(pluginVersion));
+        thisCoreVersionOrOlderPerPluginVersion[pluginVersion] = 0;
+    }
+    row.append($("<th>").html("Sum"));
+    row.appendTo('#versionsContainer');
+
+
+    var thisCoreVersionOrOlder = 0
+
+    // value rows
+    for (let coreVersion of coreVersions) {
+        var row = $("<tr>");
+        if (/^\d[.]\d+[.]\d$/.test(coreVersion)) {
+            row.addClass('lts');
+        }
+        row.append($("<th>").html(coreVersion));
+        var thisCoreVersion = 0;
+        for (let pluginVersion of pluginVersions) {
+            var cnt = versionData[pluginVersion][coreVersion];
+            if (cnt == null) {
+                cnt = 0;
+            }
+            thisCoreVersion += cnt;
+            var title = pluginVersion + " on " + coreVersion + ": " + cnt + " installs (" + Math.round(cnt/totalInstalls*100) + "%)";
+            title += " - " + Math.round((1-thisCoreVersionOrOlderPerPluginVersion[pluginVersion]/totalInstallsPerPluginVersion[pluginVersion])*100) + "% of " + pluginVersion + " installs are on this core version or newer";
+            row.append($("<td>").attr("title", title).css("opacity", Math.max(0.1, cnt*100/totalInstalls)).html(cnt));
+
+            thisCoreVersionOrOlderPerPluginVersion[pluginVersion] += cnt;
+        }
+
+        var title = coreVersion + " total: " + thisCoreVersion + " installs (" + Math.round(thisCoreVersion/totalInstalls*100) + "%)";
+        title += " - " + Math.round((1-thisCoreVersionOrOlder/totalInstalls)*100) + "% of plugin installs are on this core version or newer";
+        row.append($("<td>").addClass("subtotal").attr("title", title).html(thisCoreVersion));
+
+        thisCoreVersionOrOlder += thisCoreVersion;
+
+        row.appendTo('#versionsContainer');
+    }
+});
+        </script>
+    </head>
+    <body>
+        <table id="versionsContainer"></table>
+    </body>
+</html>

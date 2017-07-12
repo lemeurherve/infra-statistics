@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Plugin and Core Version Matrix for the persona Plugin</title>
+        <style type="text/css">
+body, table {
+    font-family: monospace;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid #FF0000;
+}
+
+table td, table th {
+    border: 1px solid #FF0000;
+    text-align: center;
+    padding: 3px;
+}
+tr.lts {
+    background-color: #eef;
+}
+td.subtotal {
+    background-color: #ccc;
+}
+        </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+$(document).ready(function() {
+
+    var versionData = {"2.4":{"1.472":1,"1.509.2":2,"1.512":4,"1.523":1,"1.524":1,"1.532.2":1,"1.532.3":1,"1.533":2,"1.537":1,"1.538":1,"1.543":2,"1.544":3,"1.546":1,"1.548":1,"1.549":1,"1.550":1,"1.552":2,"1.553":1,"1.554":1,"1.554.1":1,"1.554.3":1,"1.557":6,"1.558":2,"1.559":1,"1.560":1,"1.563":1,"1.565.2":1,"1.565.3":4,"1.566":1,"1.568":1,"1.569":2,"1.570":1,"1.572":1,"1.573":1,"1.574":2,"1.575":1,"1.578":1,"1.579":3,"1.580":1,"1.580.1":2,"1.580.3":1,"1.581":1,"1.582":1,"1.583":4,"1.584":1,"1.585":1,"1.588":6,"1.589":1,"1.590":1,"1.592":1,"1.593":1,"1.594":3,"1.595":2,"1.596":2,"1.596.2":3,"1.596.3":2,"1.598":3,"1.599":3,"1.602":4,"1.604":2,"1.605":3,"1.606":3,"1.607":1,"1.608":1,"1.609":3,"1.609.1":2,"1.609.2":1,"1.609.3":3,"1.610":2,"1.611":2,"1.612":3,"1.613":2,"1.614":2,"1.615":1,"1.617":7,"1.618":1,"1.619":1,"1.620":2,"1.621":1,"1.622":6,"1.624":2,"1.625":1,"1.625.1":1,"1.625.2":1,"1.625.3":5,"1.628":2,"1.629":1,"1.630":1,"1.631":1,"1.632":1,"1.634":1,"1.636":2,"1.637":2,"1.638":5,"1.639":2,"1.640":1,"1.641":1,"1.642":3,"1.642.1":3,"1.642.4":6,"1.643":5,"1.644":4,"1.651.1":4,"1.651.2":3,"1.651.3":19,"1.653":2,"1.654":3,"1.655":1,"1.656":6,"1.658":5,"2.0":3,"2.1":1,"2.10":2,"2.13":1,"2.15":1,"2.16":2,"2.17":3,"2.18":2,"2.19":1,"2.19.1":6,"2.19.2":2,"2.19.4":6,"2.2":6,"2.20":2,"2.21":4,"2.22":3,"2.23":4,"2.24":1,"2.25":1,"2.26":1,"2.28":2,"2.29":1,"2.3":2,"2.30":1,"2.31":1,"2.32":2,"2.32.1":5,"2.32.2":4,"2.32.3":6,"2.32.3.2":2,"2.34":1,"2.35":2,"2.36":4,"2.37":1,"2.38":1,"2.39":1,"2.41":2,"2.42":2,"2.45":2,"2.46":3,"2.46.1":8,"2.46.2":36,"2.46.3":30,"2.47":4,"2.48":2,"2.49":2,"2.5":3,"2.50":5,"2.51":2,"2.52":1,"2.53":11,"2.54":3,"2.55":5,"2.56":1,"2.57":2,"2.58":6,"2.6":3,"2.60":1,"2.60.1":13,"2.61":5,"2.62":7,"2.63":10,"2.64":10,"2.65":8,"2.66":6,"2.67":20,"2.7":3,"2.7.1":6,"2.7.2":7,"2.7.3":2,"2.7.4":15,"2.8":2,"2.9":2},"2.3":{"1.473":1,"1.502":1,"1.511":1,"1.517":2,"1.518":1,"1.519":1,"1.523":1,"1.524":1,"1.525":1,"1.532.3":1,"1.555":1,"1.580":2,"1.617":1,"1.623":1,"1.638":1,"2.20":1,"2.36":1},"2.2":{"1.424.6":1,"1.464":1,"1.470":1,"1.472":1,"1.475":1,"1.481":1,"1.483":1,"1.492":1,"1.494":22,"1.499":1,"1.512":33,"1.514":1,"1.520":1,"1.529":1,"1.554":1,"1.559":1,"1.565.3":1,"1.568":1,"1.573":1,"1.579":1,"1.580.1":1,"1.584":1,"1.596":1,"1.614":1,"1.634":1,"1.658":3,"2.65":1},"2.1":{"1.555":1},"1.3":{"1.434":1,"1.546":1,"1.611":2,"1.651.3":1,"2.32.1":1},"1.2":{"1.500":1,"1.559":1,"1.583":1,"1.598":2,"1.606":1,"1.609":4,"1.635":1},"1.1":{"1.427":1,"1.457":1,"1.609.3":1,"2.46.2":1}};
+
+    var pluginVersionsSet = new Set();
+
+    var coreVersionsSet = new Set();
+
+    var totalInstallsPerPluginVersion = new Map();
+
+    var totalInstalls = 0
+
+    for (var pluginVersion in versionData) {
+        if (/^\d[\d.]*\d$/.test(pluginVersion)) {
+            pluginVersionsSet.add(pluginVersion);
+            if (!totalInstallsPerPluginVersion.has(pluginVersion)) {
+                totalInstallsPerPluginVersion[pluginVersion] = 0;
+            }
+            for (var coreVersion in versionData[pluginVersion]) {
+                if (/^[12][.]\d+(|[.]\d)$/.test(coreVersion)) {
+                    coreVersionsSet.add(coreVersion);
+                    totalInstalls += versionData[pluginVersion][coreVersion];
+                    totalInstallsPerPluginVersion[pluginVersion] += versionData[pluginVersion][coreVersion];
+                }
+            }
+        }
+    }
+
+    var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
+
+    var pluginVersions = Array.from(pluginVersionsSet);
+    pluginVersions.sort(collator.compare);
+
+    var coreVersions = Array.from(coreVersionsSet);
+    coreVersions.sort(collator.compare);
+
+    var thisCoreVersionOrOlderPerPluginVersion = {};
+
+    // header row
+    var row = $("<tr>");
+    row.append($("<th>").html("persona - " + totalInstalls));
+    for (let pluginVersion of pluginVersions) {
+        row.append($("<th>").html(pluginVersion));
+        thisCoreVersionOrOlderPerPluginVersion[pluginVersion] = 0;
+    }
+    row.append($("<th>").html("Sum"));
+    row.appendTo('#versionsContainer');
+
+
+    var thisCoreVersionOrOlder = 0
+
+    // value rows
+    for (let coreVersion of coreVersions) {
+        var row = $("<tr>");
+        if (/^\d[.]\d+[.]\d$/.test(coreVersion)) {
+            row.addClass('lts');
+        }
+        row.append($("<th>").html(coreVersion));
+        var thisCoreVersion = 0;
+        for (let pluginVersion of pluginVersions) {
+            var cnt = versionData[pluginVersion][coreVersion];
+            if (cnt == null) {
+                cnt = 0;
+            }
+            thisCoreVersion += cnt;
+            var title = pluginVersion + " on " + coreVersion + ": " + cnt + " installs (" + Math.round(cnt/totalInstalls*100) + "%)";
+            title += " - " + Math.round((1-thisCoreVersionOrOlderPerPluginVersion[pluginVersion]/totalInstallsPerPluginVersion[pluginVersion])*100) + "% of " + pluginVersion + " installs are on this core version or newer";
+            row.append($("<td>").attr("title", title).css("opacity", Math.max(0.1, cnt*100/totalInstalls)).html(cnt));
+
+            thisCoreVersionOrOlderPerPluginVersion[pluginVersion] += cnt;
+        }
+
+        var title = coreVersion + " total: " + thisCoreVersion + " installs (" + Math.round(thisCoreVersion/totalInstalls*100) + "%)";
+        title += " - " + Math.round((1-thisCoreVersionOrOlder/totalInstalls)*100) + "% of plugin installs are on this core version or newer";
+        row.append($("<td>").addClass("subtotal").attr("title", title).html(thisCoreVersion));
+
+        thisCoreVersionOrOlder += thisCoreVersion;
+
+        row.appendTo('#versionsContainer');
+    }
+});
+        </script>
+    </head>
+    <body>
+        <table id="versionsContainer"></table>
+    </body>
+</html>

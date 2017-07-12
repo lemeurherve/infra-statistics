@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>Plugin and Core Version Matrix for the pipeline-github-lib Plugin</title>
+        <style type="text/css">
+body, table {
+    font-family: monospace;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid #FF0000;
+}
+
+table td, table th {
+    border: 1px solid #FF0000;
+    text-align: center;
+    padding: 3px;
+}
+tr.lts {
+    background-color: #eef;
+}
+td.subtotal {
+    background-color: #ccc;
+}
+        </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+$(document).ready(function() {
+
+    var versionData = {"1.1":{"2.46.3":1},"1.0-beta-1":{"2.19.1":1,"2.19.3":1,"2.22":1,"2.25":1,"2.32.1":1,"2.32.2":1,"2.46.3":1,"2.47":1,"2.61":1,"2.62":1,"2.7.3":2,"2.9":2},"1.0":{"1.595":2,"1.596.1":2,"1.596.2":1,"1.596.3":1,"1.599":1,"1.602":1,"1.609":1,"1.609.1":1,"1.610":1,"1.612":2,"1.617":1,"1.620":1,"1.622":3,"1.623":1,"1.625.1":1,"1.625.2":2,"1.625.3":5,"1.627":3,"1.630":2,"1.631":1,"1.632":2,"1.634":4,"1.635":4,"1.637":1,"1.638":6,"1.639":1,"1.641":3,"1.642":2,"1.642.1":5,"1.642.4":7,"1.643":4,"1.644":3,"1.651.1":12,"1.651.2":17,"1.651.3":42,"1.653":1,"1.654":5,"1.656":6,"1.658":8,"2.0":48,"2.0-alpha-4":1,"2.0-beta-1":2,"2.0-beta-2":1,"2.0-rc-1":5,"2.1":12,"2.10":34,"2.11":30,"2.12":8,"2.13":13,"2.14":23,"2.15":13,"2.16":23,"2.17":36,"2.18":10,"2.19":43,"2.19.1":251,"2.19.2":117,"2.19.3":151,"2.19.4":339,"2.19.4.2-rolling":4,"2.2":10,"2.20":30,"2.21":18,"2.22":15,"2.23":43,"2.24":18,"2.25":33,"2.26":23,"2.27":40,"2.28":14,"2.29":4,"2.3":27,"2.30":27,"2.31":9,"2.32":42,"2.32.1":512,"2.32.1.1-rolling":3,"2.32.2":1602,"2.32.2.1-rolling":1,"2.32.2.6-rolling":1,"2.32.2.7-rolling":3,"2.32.3":2243,"2.32.3-INFONOVA-1":1,"2.32.3.1":391,"2.32.3.2":17,"2.33":38,"2.34":43,"2.35":44,"2.36":35,"2.37":47,"2.38":51,"2.39":56,"2.4":1,"2.40":79,"2.41":80,"2.42":42,"2.43":31,"2.44":79,"2.45":268,"2.46":234,"2.46.1":2818,"2.46.2":6419,"2.46.2.1":248,"2.46.24.0.1":1,"2.46.3":12032,"2.46.3.2":376,"2.47":257,"2.48":329,"2.49":302,"2.5":18,"2.50":328,"2.51":386,"2.52":462,"2.53":687,"2.54":296,"2.55":352,"2.56":232,"2.57":335,"2.58":587,"2.59":336,"2.6":19,"2.60":435,"2.60.1":4387,"2.60.1.1":26,"2.61":968,"2.62":1164,"2.63":1455,"2.64":2204,"2.65":1795,"2.66":2468,"2.67":2575,"2.67-ialbors":1,"2.7":42,"2.7.1":137,"2.7.2":126,"2.7.24.0.2":2,"2.7.3":88,"2.7.4":582,"2.8":52,"2.9":134}};
+
+    var pluginVersionsSet = new Set();
+
+    var coreVersionsSet = new Set();
+
+    var totalInstallsPerPluginVersion = new Map();
+
+    var totalInstalls = 0
+
+    for (var pluginVersion in versionData) {
+        if (/^\d[\d.]*\d$/.test(pluginVersion)) {
+            pluginVersionsSet.add(pluginVersion);
+            if (!totalInstallsPerPluginVersion.has(pluginVersion)) {
+                totalInstallsPerPluginVersion[pluginVersion] = 0;
+            }
+            for (var coreVersion in versionData[pluginVersion]) {
+                if (/^[12][.]\d+(|[.]\d)$/.test(coreVersion)) {
+                    coreVersionsSet.add(coreVersion);
+                    totalInstalls += versionData[pluginVersion][coreVersion];
+                    totalInstallsPerPluginVersion[pluginVersion] += versionData[pluginVersion][coreVersion];
+                }
+            }
+        }
+    }
+
+    var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
+
+    var pluginVersions = Array.from(pluginVersionsSet);
+    pluginVersions.sort(collator.compare);
+
+    var coreVersions = Array.from(coreVersionsSet);
+    coreVersions.sort(collator.compare);
+
+    var thisCoreVersionOrOlderPerPluginVersion = {};
+
+    // header row
+    var row = $("<tr>");
+    row.append($("<th>").html("pipeline-github-lib - " + totalInstalls));
+    for (let pluginVersion of pluginVersions) {
+        row.append($("<th>").html(pluginVersion));
+        thisCoreVersionOrOlderPerPluginVersion[pluginVersion] = 0;
+    }
+    row.append($("<th>").html("Sum"));
+    row.appendTo('#versionsContainer');
+
+
+    var thisCoreVersionOrOlder = 0
+
+    // value rows
+    for (let coreVersion of coreVersions) {
+        var row = $("<tr>");
+        if (/^\d[.]\d+[.]\d$/.test(coreVersion)) {
+            row.addClass('lts');
+        }
+        row.append($("<th>").html(coreVersion));
+        var thisCoreVersion = 0;
+        for (let pluginVersion of pluginVersions) {
+            var cnt = versionData[pluginVersion][coreVersion];
+            if (cnt == null) {
+                cnt = 0;
+            }
+            thisCoreVersion += cnt;
+            var title = pluginVersion + " on " + coreVersion + ": " + cnt + " installs (" + Math.round(cnt/totalInstalls*100) + "%)";
+            title += " - " + Math.round((1-thisCoreVersionOrOlderPerPluginVersion[pluginVersion]/totalInstallsPerPluginVersion[pluginVersion])*100) + "% of " + pluginVersion + " installs are on this core version or newer";
+            row.append($("<td>").attr("title", title).css("opacity", Math.max(0.1, cnt*100/totalInstalls)).html(cnt));
+
+            thisCoreVersionOrOlderPerPluginVersion[pluginVersion] += cnt;
+        }
+
+        var title = coreVersion + " total: " + thisCoreVersion + " installs (" + Math.round(thisCoreVersion/totalInstalls*100) + "%)";
+        title += " - " + Math.round((1-thisCoreVersionOrOlder/totalInstalls)*100) + "% of plugin installs are on this core version or newer";
+        row.append($("<td>").addClass("subtotal").attr("title", title).html(thisCoreVersion));
+
+        thisCoreVersionOrOlder += thisCoreVersion;
+
+        row.appendTo('#versionsContainer');
+    }
+});
+        </script>
+    </head>
+    <body>
+        <table id="versionsContainer"></table>
+    </body>
+</html>

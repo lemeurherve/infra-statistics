@@ -40,7 +40,8 @@
         "1488326400000": 150,
         "1491004800000": 153,
         "1493596800000": 158,
-        "1496275200000": 181
+        "1496275200000": 181,
+        "1498867200000": 180
     },
     "installationsPercentage": {
         "1370044800000": 0.04412592626405563,
@@ -82,28 +83,27 @@
         "1488326400000": 0.0999267204050363,
         "1491004800000": 0.1061534298658859,
         "1493596800000": 0.10473633621689701,
-        "1496275200000": 0.11999151441224046
+        "1496275200000": 0.11999151441224046,
+        "1498867200000": 0.11970950493469182
     },
     "installationsPerVersion": {
         "0.1-SNAPSHOT (private)": 4,
-        "0.2": 137,
-        "0.3-SNAPSHOT (private)": 9,
-        "0.7-SNAPSHOT (private)": 1,
-        "1.2-SNAPSHOT (private)": 1,
-        "1.22-SNAPSHOT (private)": 13,
-        "1.3-SNAPSHOT (private)": 5,
-        "1.3.3-SNAPSHOT (private)": 7,
-        "1.3.4-SNAPSHOT (private)": 4
+        "0.2": 133,
+        "0.3-SNAPSHOT (private)": 10,
+        "0.7-SNAPSHOT (private)": 3,
+        "1.22-SNAPSHOT (private)": 18,
+        "1.3-SNAPSHOT (private)": 4,
+        "1.3.3-SNAPSHOT (private)": 5,
+        "1.3.4-SNAPSHOT (private)": 3
     },
     "installationsPercentagePerVersion": {
-        "0.1-SNAPSHOT (private)": 0.002651746174856143,
-        "0.2": 0.09082230648882289,
-        "0.3-SNAPSHOT (private)": 0.005966428893426321,
-        "0.7-SNAPSHOT (private)": 6.629365437140357E-4,
-        "1.2-SNAPSHOT (private)": 6.629365437140357E-4,
-        "1.22-SNAPSHOT (private)": 0.008618175068282464,
-        "1.3-SNAPSHOT (private)": 0.0033146827185701784,
-        "1.3.3-SNAPSHOT (private)": 0.00464055580599825,
-        "1.3.4-SNAPSHOT (private)": 0.002651746174856143
+        "0.1-SNAPSHOT (private)": 0.0026602112207709293,
+        "0.2": 0.0884520230906334,
+        "0.3-SNAPSHOT (private)": 0.006650528051927323,
+        "0.7-SNAPSHOT (private)": 0.0019951584155781968,
+        "1.22-SNAPSHOT (private)": 0.011970950493469181,
+        "1.3-SNAPSHOT (private)": 0.0026602112207709293,
+        "1.3.3-SNAPSHOT (private)": 0.0033252640259636614,
+        "1.3.4-SNAPSHOT (private)": 0.0019951584155781968
     }
 }

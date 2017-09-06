@@ -1,19 +1,19 @@
 {
     "name": "azure-app-service",
     "installations": {
-        "1498867200000": 21
+        "1498867200000": 21,
+        "1501545600000": 121
     },
     "installationsPercentage": {
-        "1498867200000": 0.013966108909047379
+        "1498867200000": 0.013966108909047379,
+        "1501545600000": 0.0783800590765404
     },
     "installationsPerVersion": {
-        "0.1": 19,
-        "0.1-SNAPSHOT (private)": 1,
-        "0.2-SNAPSHOT (private)": 1
+        "0.1": 119,
+        "0.2-SNAPSHOT (private)": 2
     },
     "installationsPercentagePerVersion": {
-        "0.1": 0.012636003298661914,
-        "0.1-SNAPSHOT (private)": 6.650528051927323E-4,
-        "0.2-SNAPSHOT (private)": 6.650528051927323E-4
+        "0.1": 0.077084520909986,
+        "0.2-SNAPSHOT (private)": 0.0012955381665543868
     }
 }

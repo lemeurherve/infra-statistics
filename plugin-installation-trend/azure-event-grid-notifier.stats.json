@@ -1,17 +1,17 @@
 {
     "name": "azure-event-grid-notifier",
     "installations": {
-        "1501545600000": 3
+        "1501545600000": 3,
+        "1504224000000": 10
     },
     "installationsPercentage": {
-        "1501545600000": 0.0019433072498315801
+        "1501545600000": 0.0019433072498315801,
+        "1504224000000": 0.006456611570247934
     },
     "installationsPerVersion": {
-        "0.1": 2,
-        "0.1-SNAPSHOT (private)": 1
+        "0.1": 10
     },
     "installationsPercentagePerVersion": {
-        "0.1": 0.0012955381665543868,
-        "0.1-SNAPSHOT (private)": 6.477690832771934E-4
+        "0.1": 0.006456611570247934
     }
 }

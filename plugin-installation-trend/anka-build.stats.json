@@ -2,20 +2,22 @@
     "name": "anka-build",
     "installations": {
         "1501545600000": 1,
-        "1504224000000": 7
+        "1504224000000": 7,
+        "1506816000000": 5
     },
     "installationsPercentage": {
         "1501545600000": 6.477690832771934E-4,
-        "1504224000000": 0.004519628099173553
+        "1504224000000": 0.004519628099173553,
+        "1506816000000": 0.003214793192353936
     },
     "installationsPerVersion": {
-        "1.5-SNAPSHOT (private)": 4,
-        "1.6": 2,
-        "1.7-SNAPSHOT (private)": 1
+        "1.5-SNAPSHOT (private)": 1,
+        "1.6": 1,
+        "1.7-SNAPSHOT (private)": 3
     },
     "installationsPercentagePerVersion": {
-        "1.5-SNAPSHOT (private)": 0.0025826446280991736,
-        "1.6": 0.0012913223140495868,
-        "1.7-SNAPSHOT (private)": 6.456611570247934E-4
+        "1.5-SNAPSHOT (private)": 6.429586384707872E-4,
+        "1.6": 6.429586384707872E-4,
+        "1.7-SNAPSHOT (private)": 0.0019288759154123616
     }
 }

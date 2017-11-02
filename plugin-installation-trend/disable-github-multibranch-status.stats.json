@@ -1,17 +1,19 @@
 {
     "name": "disable-github-multibranch-status",
     "installations": {
-        "1504224000000": 6
+        "1504224000000": 6,
+        "1506816000000": 39
     },
     "installationsPercentage": {
-        "1504224000000": 0.0038739669421487604
+        "1504224000000": 0.0038739669421487604,
+        "1506816000000": 0.0250753869003607
     },
     "installationsPerVersion": {
-        "1.0-SNAPSHOT (private)": 5,
-        "1.1": 1
+        "1.0-SNAPSHOT (private)": 4,
+        "1.1": 35
     },
     "installationsPercentagePerVersion": {
-        "1.0-SNAPSHOT (private)": 0.003228305785123967,
-        "1.1": 6.456611570247934E-4
+        "1.0-SNAPSHOT (private)": 0.002571834553883149,
+        "1.1": 0.02250355234647755
     }
 }

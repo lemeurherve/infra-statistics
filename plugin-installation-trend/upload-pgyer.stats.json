@@ -1,17 +1,19 @@
 {
     "name": "upload-pgyer",
     "installations": {
-        "1504224000000": 3
+        "1504224000000": 3,
+        "1506816000000": 9
     },
     "installationsPercentage": {
-        "1504224000000": 0.0019369834710743802
+        "1504224000000": 0.0019369834710743802,
+        "1506816000000": 0.005786627746237084
     },
     "installationsPerVersion": {
-        "1.29": 1,
-        "1.30-SNAPSHOT (private)": 2
+        "1.29": 8,
+        "1.30-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.29": 6.456611570247934E-4,
-        "1.30-SNAPSHOT (private)": 0.0012913223140495868
+        "1.29": 0.005143669107766298,
+        "1.30-SNAPSHOT (private)": 6.429586384707872E-4
     }
 }

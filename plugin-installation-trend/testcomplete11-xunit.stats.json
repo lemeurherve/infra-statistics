@@ -1,17 +1,19 @@
 {
     "name": "testcomplete11-xunit",
     "installations": {
-        "1504224000000": 7
+        "1504224000000": 7,
+        "1506816000000": 20
     },
     "installationsPercentage": {
-        "1504224000000": 0.004519628099173553
+        "1504224000000": 0.004519628099173553,
+        "1506816000000": 0.012859172769415743
     },
     "installationsPerVersion": {
-        "1.1": 6,
+        "1.1": 19,
         "1.2-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.1": 0.0038739669421487604,
-        "1.2-SNAPSHOT (private)": 6.456611570247934E-4
+        "1.1": 0.012216214130944956,
+        "1.2-SNAPSHOT (private)": 6.429586384707872E-4
     }
 }

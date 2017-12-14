@@ -1,17 +1,19 @@
 {
     "name": "first-plugin",
     "installations": {
-        "1506816000000": 4
+        "1506816000000": 4,
+        "1509494400000": 4
     },
     "installationsPercentage": {
-        "1506816000000": 0.002571834553883149
+        "1506816000000": 0.002571834553883149,
+        "1509494400000": 0.00248180526514987
     },
     "installationsPerVersion": {
         "1.0-SNAPSHOT (private)": 1,
         "1.2": 3
     },
     "installationsPercentagePerVersion": {
-        "1.0-SNAPSHOT (private)": 6.429586384707872E-4,
-        "1.2": 0.0019288759154123616
+        "1.0-SNAPSHOT (private)": 6.204513162874675E-4,
+        "1.2": 0.0018613539488624025
     }
 }

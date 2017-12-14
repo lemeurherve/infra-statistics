@@ -1,15 +1,19 @@
 {
     "name": "bitbucket-scm-filter-aged-refs",
     "installations": {
-        "1506816000000": 3
+        "1506816000000": 3,
+        "1509494400000": 49
     },
     "installationsPercentage": {
-        "1506816000000": 0.0019288759154123616
+        "1506816000000": 0.0019288759154123616,
+        "1509494400000": 0.030402114498085907
     },
     "installationsPerVersion": {
-        "0.1.0": 3
+        "0.1.0": 48,
+        "0.2.0-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "0.1.0": 0.0019288759154123616
+        "0.1.0": 0.02978166318179844,
+        "0.2.0-SNAPSHOT (private)": 6.204513162874675E-4
     }
 }

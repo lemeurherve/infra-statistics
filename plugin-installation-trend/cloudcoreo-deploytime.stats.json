@@ -1,23 +1,19 @@
 {
     "name": "cloudcoreo-deploytime",
     "installations": {
-        "1509494400000": 5
+        "1509494400000": 5,
+        "1512086400000": 5
     },
     "installationsPercentage": {
-        "1509494400000": 0.0031022565814373374
+        "1509494400000": 0.0031022565814373374,
+        "1512086400000": 0.0032752092858733674
     },
     "installationsPerVersion": {
-        "0.1.1-SNAPSHOT (private)": 1,
-        "0.2.2-SNAPSHOT (private)": 1,
-        "0.2.4-SNAPSHOT (private)": 1,
-        "1.0-BETA": 1,
-        "1.0-SNAPSHOT (private)": 1
+        "0.2.3": 2,
+        "0.2.4-SNAPSHOT (private)": 3
     },
     "installationsPercentagePerVersion": {
-        "0.1.1-SNAPSHOT (private)": 6.204513162874675E-4,
-        "0.2.2-SNAPSHOT (private)": 6.204513162874675E-4,
-        "0.2.4-SNAPSHOT (private)": 6.204513162874675E-4,
-        "1.0-BETA": 6.204513162874675E-4,
-        "1.0-SNAPSHOT (private)": 6.204513162874675E-4
+        "0.2.3": 0.001310083714349347,
+        "0.2.4-SNAPSHOT (private)": 0.0019651255715240202
     }
 }

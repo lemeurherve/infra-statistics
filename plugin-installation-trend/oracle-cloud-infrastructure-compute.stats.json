@@ -1,17 +1,21 @@
 {
     "name": "oracle-cloud-infrastructure-compute",
     "installations": {
-        "1514764800000": 7
+        "1514764800000": 7,
+        "1517443200000": 15
     },
     "installationsPercentage": {
-        "1514764800000": 0.004388907350165838
+        "1514764800000": 0.004388907350165838,
+        "1517443200000": 0.009777656100279641
     },
     "installationsPerVersion": {
-        "1.0.0": 6,
-        "1.0.0-SNAPSHOT (private)": 1
+        "1.0.0": 10,
+        "1.0.0-SNAPSHOT (private)": 4,
+        "1.0.18-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.0.0": 0.0037619205858564326,
-        "1.0.0-SNAPSHOT (private)": 6.269867643094054E-4
+        "1.0.0": 0.006518437400186428,
+        "1.0.0-SNAPSHOT (private)": 0.002607374960074571,
+        "1.0.18-SNAPSHOT (private)": 6.518437400186428E-4
     }
 }

@@ -1,15 +1,17 @@
 {
     "name": "agent-loadbalance",
     "installations": {
-        "1517443200000": 1
+        "1517443200000": 1,
+        "1519862400000": 3
     },
     "installationsPercentage": {
-        "1517443200000": 6.518437400186428E-4
+        "1517443200000": 6.518437400186428E-4,
+        "1519862400000": 0.0018258059411725325
     },
     "installationsPerVersion": {
-        "1.0-SNAPSHOT (private)": 1
+        "1.0": 3
     },
     "installationsPercentagePerVersion": {
-        "1.0-SNAPSHOT (private)": 6.518437400186428E-4
+        "1.0": 0.0018258059411725325
     }
 }

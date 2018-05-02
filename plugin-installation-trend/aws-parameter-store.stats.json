@@ -1,19 +1,23 @@
 {
     "name": "aws-parameter-store",
     "installations": {
-        "1519862400000": 4
+        "1519862400000": 4,
+        "1522540800000": 31
     },
     "installationsPercentage": {
-        "1519862400000": 0.002434407921563377
+        "1519862400000": 0.002434407921563377,
+        "1522540800000": 0.018948655256723717
     },
     "installationsPerVersion": {
-        "1.0.0": 2,
-        "1.0.0-SNAPSHOT (private)": 1,
-        "1.0.1-SNAPSHOT (private)": 1
+        "1.0.0": 7,
+        "1.0.1-SNAPSHOT (private)": 2,
+        "1.0.3-SNAPSHOT (private)": 1,
+        "1.1.0": 21
     },
     "installationsPercentagePerVersion": {
-        "1.0.0": 0.0012172039607816884,
-        "1.0.0-SNAPSHOT (private)": 6.086019803908442E-4,
-        "1.0.1-SNAPSHOT (private)": 6.086019803908442E-4
+        "1.0.0": 0.004278728606356968,
+        "1.0.1-SNAPSHOT (private)": 0.0012224938875305623,
+        "1.0.3-SNAPSHOT (private)": 6.112469437652812E-4,
+        "1.1.0": 0.012836185819070905
     }
 }

@@ -1,17 +1,19 @@
 {
     "name": "testquality-updater",
     "installations": {
-        "1519862400000": 5
+        "1519862400000": 5,
+        "1522540800000": 5
     },
     "installationsPercentage": {
-        "1519862400000": 0.003043009901954221
+        "1519862400000": 0.003043009901954221,
+        "1522540800000": 0.003056234718826406
     },
     "installationsPerVersion": {
         "1.0-SNAPSHOT (private)": 1,
         "1.1": 4
     },
     "installationsPercentagePerVersion": {
-        "1.0-SNAPSHOT (private)": 6.086019803908442E-4,
-        "1.1": 0.002434407921563377
+        "1.0-SNAPSHOT (private)": 6.112469437652812E-4,
+        "1.1": 0.0024449877750611247
     }
 }

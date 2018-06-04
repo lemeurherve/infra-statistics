@@ -1,17 +1,17 @@
 {
     "name": "rabbitmq-publisher",
     "installations": {
-        "1522540800000": 7
+        "1522540800000": 7,
+        "1525132800000": 9
     },
     "installationsPercentage": {
-        "1522540800000": 0.004278728606356968
+        "1522540800000": 0.004278728606356968,
+        "1525132800000": 0.005424268175818613
     },
     "installationsPerVersion": {
-        "1.0": 6,
-        "1.0-SNAPSHOT (private)": 1
+        "1.0": 9
     },
     "installationsPercentagePerVersion": {
-        "1.0": 0.003667481662591687,
-        "1.0-SNAPSHOT (private)": 6.112469437652812E-4
+        "1.0": 0.005424268175818613
     }
 }

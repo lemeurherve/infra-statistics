@@ -1,29 +1,37 @@
 {
     "name": "configuration-as-code",
     "installations": {
-        "1527811200000": 54
+        "1527811200000": 54,
+        "1530403200000": 111
     },
     "installationsPercentage": {
-        "1527811200000": 0.03190999019063265
+        "1527811200000": 0.03190999019063265,
+        "1530403200000": 0.06208053691275168
     },
     "installationsPerVersion": {
-        "0.4-alpha": 4,
+        "0.1-alpha": 1,
+        "0.10-alpha": 28,
+        "0.11-alpha-SNAPSHOT (private)": 5,
+        "0.11-alpha-rc383.6e33a3892f3f": 1,
+        "0.4-alpha": 1,
         "0.5-alpha-SNAPSHOT (private)": 1,
-        "0.6-alpha": 12,
-        "0.7-alpha": 2,
-        "0.8-alpha": 26,
+        "0.6-alpha": 18,
+        "0.7-alpha": 1,
+        "0.8-alpha": 15,
         "0.8-alpha-SNAPSHOT (private)": 1,
-        "0.9-alpha": 5,
-        "0.9-alpha-SNAPSHOT (private)": 3
+        "0.9-alpha": 39
     },
     "installationsPercentagePerVersion": {
-        "0.4-alpha": 0.0023637029770838995,
-        "0.5-alpha-SNAPSHOT (private)": 5.909257442709749E-4,
-        "0.6-alpha": 0.007091108931251699,
-        "0.7-alpha": 0.0011818514885419498,
-        "0.8-alpha": 0.015364069351045348,
-        "0.8-alpha-SNAPSHOT (private)": 5.909257442709749E-4,
-        "0.9-alpha": 0.0029546287213548746,
-        "0.9-alpha-SNAPSHOT (private)": 0.0017727772328129247
+        "0.1-alpha": 5.592841163310962E-4,
+        "0.10-alpha": 0.015659955257270694,
+        "0.11-alpha-SNAPSHOT (private)": 0.002796420581655481,
+        "0.11-alpha-rc383.6e33a3892f3f": 5.592841163310962E-4,
+        "0.4-alpha": 5.592841163310962E-4,
+        "0.5-alpha-SNAPSHOT (private)": 5.592841163310962E-4,
+        "0.6-alpha": 0.010067114093959731,
+        "0.7-alpha": 5.592841163310962E-4,
+        "0.8-alpha": 0.008389261744966443,
+        "0.8-alpha-SNAPSHOT (private)": 5.592841163310962E-4,
+        "0.9-alpha": 0.02181208053691275
     }
 }

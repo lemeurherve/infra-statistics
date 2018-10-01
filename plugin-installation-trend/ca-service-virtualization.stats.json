@@ -1,15 +1,19 @@
 {
     "name": "ca-service-virtualization",
     "installations": {
-        "1533081600000": 15
+        "1533081600000": 15,
+        "1535760000000": 28
     },
     "installationsPercentage": {
-        "1533081600000": 0.008186164290859875
+        "1533081600000": 0.008186164290859875,
+        "1535760000000": 0.014536166501404298
     },
     "installationsPerVersion": {
-        "1.0.1": 15
+        "1.0.1": 26,
+        "1.0.2-SNAPSHOT (private)": 2
     },
     "installationsPercentagePerVersion": {
-        "1.0.1": 0.008186164290859875
+        "1.0.1": 0.013497868894161134,
+        "1.0.2-SNAPSHOT (private)": 0.001038297607243164
     }
 }

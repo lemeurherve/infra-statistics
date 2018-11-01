@@ -1,17 +1,17 @@
 {
     "name": "tricentis-ci",
     "installations": {
-        "1535760000000": 2
+        "1535760000000": 2,
+        "1538352000000": 20
     },
     "installationsPercentage": {
-        "1535760000000": 0.001038297607243164
+        "1535760000000": 0.001038297607243164,
+        "1538352000000": 0.00928375806526482
     },
     "installationsPerVersion": {
-        "1.0": 1,
-        "1.0-SNAPSHOT (private)": 1
+        "1.0": 20
     },
     "installationsPercentagePerVersion": {
-        "1.0": 5.19148803621582E-4,
-        "1.0-SNAPSHOT (private)": 5.19148803621582E-4
+        "1.0": 0.00928375806526482
     }
 }

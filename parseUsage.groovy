@@ -105,6 +105,22 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
     mColl.createIndex([install: 1])
     println "${instCnt.keySet().size()} unique installs seen."
 
+    File f = new File(outputDir, "report-count-${timestamp}")
+    def grouped = [:]
+    instCnt.each { k, v ->
+        if (v > 1) {
+            if (!grouped.containsKey(v)) {
+                println("v is ${v}")
+                grouped[v] = [k]
+            } else {
+                grouped[v].add(k)
+            }
+        }
+    }
+
+    grouped.sort {it.key}.each { k, v -> f.write("${v}: ${k}\n")}
+
+
     def otmp = new File(outputDir, "${timestamp}.json.tmp")
     otmp.withOutputStream() {os ->
         def w = new OutputStreamWriter(new GZIPOutputStream(os),"UTF-8");
@@ -129,20 +145,6 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
             w.close();
         }
     }
-
-    File f = new File(outputDir, "SORTED")
-    def grouped = [:]
-    instCnt.each { k, v ->
-        if (v > 1) {
-            if (!grouped.containsKey(v)) {
-                grouped[v] = [k]
-            } else {
-                grouped[v] << k
-            }
-        }
-    }
-
-    grouped.sort {it.key}.each { k, v -> f.write("${v}: ${k}\n")}
 
     // when successfully completed, atomically produce the output
     otmp.renameTo(new File(outputDir, "${timestamp}.json.gz"))

@@ -82,6 +82,7 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
 
     logDir.eachFileMatch(~/$logRE/) { origGzFile ->
         println "Handing original log ${origGzFile.canonicalPath}"
+
         new GZIPInputStream(new FileInputStream(origGzFile)).eachLine("UTF-8") { l ->
             linesSeen++;
             def j = slurper.parseText(l)
@@ -110,7 +111,6 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
     instCnt.each { k, v ->
         if (v > 1) {
             if (!grouped.containsKey(v)) {
-                println("v is ${v}")
                 grouped[v] = [k]
             } else {
                 grouped[v].add(k)
@@ -118,8 +118,8 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
         }
     }
 
-    grouped.sort {it.key}.each { k, v -> f.write("${v}: ${k}\n")}
-
+    grouped.sort {it.key}.each { k, v -> f.append("${k}: ${v}\n")}
+    f.close()
 
     def otmp = new File(outputDir, "${timestamp}.json.tmp")
     otmp.withOutputStream() {os ->

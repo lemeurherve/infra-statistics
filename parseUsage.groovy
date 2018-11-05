@@ -129,7 +129,19 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
             w.close();
         }
     }
-    
+
+    File f = new File(outputDir, "SORTED")
+    def grouped = [:]
+    instCnt.each { k, v ->
+        if (!grouped.containsKey(v)) {
+            grouped[v] = [k]
+        } else {
+            grouped[v] << k
+        }
+    }
+
+    grouped.sort {it.key}.each { k, v -> f.write("${v}: ${k}\n")}
+
     // when successfully completed, atomically produce the output
     otmp.renameTo(new File(outputDir, "${timestamp}.json.gz"))
 

@@ -106,7 +106,8 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
     mColl.createIndex([install: 1])
     println "${instCnt.keySet().size()} unique installs seen."
 
-    File f = new File(outputDir, "report-count-${timestamp}")
+    File f = new File(outputDir, "report-grouping-${timestamp}")
+    File cf = new File(outputDir, "report-count-${timestamp}")
     def grouped = [:]
     instCnt.each { k, v ->
         if (v > 1) {
@@ -118,8 +119,9 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
         }
     }
 
-    grouped.sort {it.key}.each { k, v -> f.append("${k}: ${v}\n")}
+    grouped.sort {it.key}.each { k, v -> f.append("${k}: ${v}\n"); cf.append("${k}: ${v.size()}\n")}
     f.close()
+    cf.close()
 
     def otmp = new File(outputDir, "${timestamp}.json.tmp")
     otmp.withOutputStream() {os ->

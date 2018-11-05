@@ -133,10 +133,12 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
     File f = new File(outputDir, "SORTED")
     def grouped = [:]
     instCnt.each { k, v ->
-        if (!grouped.containsKey(v)) {
-            grouped[v] = [k]
-        } else {
-            grouped[v] << k
+        if (v > 1) {
+            if (!grouped.containsKey(v)) {
+                grouped[v] = [k]
+            } else {
+                grouped[v] << k
+            }
         }
     }
 

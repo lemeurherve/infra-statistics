@@ -79,12 +79,16 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
 
     def linesSeen = 0
     def instCnt = [:]
+    def dayCnt = [:]
 
     logDir.eachFileMatch(~/$logRE/) { origGzFile ->
         println "Handing original log ${origGzFile.canonicalPath}"
 
         new GZIPInputStream(new FileInputStream(origGzFile)).eachLine("UTF-8") { l ->
             linesSeen++;
+            if (!dayCnt.containsKey(origGzFile.name)) {
+                dayCnt[origGzFile.name] = [:]
+            }
             def j = slurper.parseText(l)
             def installId = j.install
             def ver = j.version
@@ -97,6 +101,10 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
                     instCnt[installId] = 0
                 }
                 instCnt[installId] += 1
+                if (!dayCnt[origGzFile.name].containsKey(installId)) {
+                    dayCnt[origGzFile.name][installId] = 0
+                }
+                dayCnt[origGzFile.name][installId] += 1
             }
             
         }
@@ -108,6 +116,7 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
 
     File f = new File(outputDir, "report-grouping-${timestamp}")
     File cf = new File(outputDir, "report-count-${timestamp}")
+    File df = new File(outputDir, "report-by-day-${timestamp}")
     def grouped = [:]
     instCnt.each { k, v ->
         if (v > 1) {
@@ -120,8 +129,6 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
     }
 
     grouped.sort {it.key}.each { k, v -> f.append("${k}: ${v}\n"); cf.append("${k}: ${v.size()}\n")}
-    f.close()
-    cf.close()
 
     def otmp = new File(outputDir, "${timestamp}.json.tmp")
     otmp.withOutputStream() {os ->

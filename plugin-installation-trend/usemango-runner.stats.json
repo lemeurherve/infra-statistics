@@ -1,17 +1,19 @@
 {
     "name": "usemango-runner",
     "installations": {
-        "1541030400000": 4
+        "1541030400000": 4,
+        "1543622400000": 8
     },
     "installationsPercentage": {
-        "1541030400000": 0.0017908950893656649
+        "1541030400000": 0.0017908950893656649,
+        "1543622400000": 0.0036496683363899307
     },
     "installationsPerVersion": {
-        "1.0": 3,
+        "1.0": 7,
         "1.1-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.0": 0.0013431713170242486,
-        "1.1-SNAPSHOT (private)": 4.477237723414162E-4
+        "1.0": 0.0031934597943411892,
+        "1.1-SNAPSHOT (private)": 4.5620854204874133E-4
     }
 }

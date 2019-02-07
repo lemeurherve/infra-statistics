@@ -2,9 +2,9 @@
   <rect fill='blue' height='25.05' stroke='black' width='12' x='15' y='1689.53' />
   <text x='15' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 15,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>repo (2505)</text>
   <rect fill='blue' height='25.23' stroke='black' width='12' x='30' y='1689.35' />
-  <text x='30' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 30,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>purge-job-history (2523)</text>
+  <text x='30' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 30,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>confluence-publisher (2523)</text>
   <rect fill='blue' height='25.23' stroke='black' width='12' x='45' y='1689.35' />
-  <text x='45' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 45,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>confluence-publisher (2523)</text>
+  <text x='45' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 45,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>purge-job-history (2523)</text>
   <rect fill='blue' height='25.31' stroke='black' width='12' x='60' y='1689.27' />
   <text x='60' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 60,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>purge-build-queue-plugin (2531)</text>
   <rect fill='blue' height='25.34' stroke='black' width='12' x='75' y='1689.24' />
@@ -108,9 +108,9 @@
   <rect fill='blue' height='34.25' stroke='black' width='12' x='810' y='1680.33' />
   <text x='810' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 810,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>validating-string-parameter (3425)</text>
   <rect fill='blue' height='34.32' stroke='black' width='12' x='825' y='1680.26' />
-  <text x='825' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 825,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>cloverphp (3432)</text>
+  <text x='825' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 825,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>clone-workspace-scm (3432)</text>
   <rect fill='blue' height='34.32' stroke='black' width='12' x='840' y='1680.26' />
-  <text x='840' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 840,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>clone-workspace-scm (3432)</text>
+  <text x='840' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 840,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>cloverphp (3432)</text>
   <rect fill='blue' height='34.53' stroke='black' width='12' x='855' y='1680.05' />
   <text x='855' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 855,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>google-login (3453)</text>
   <rect fill='blue' height='35.17' stroke='black' width='12' x='870' y='1679.41' />
@@ -318,9 +318,9 @@
   <rect fill='blue' height='84.15' stroke='black' width='12' x='2385' y='1630.43' />
   <text x='2385' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 2385,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>jquery-ui (8415)</text>
   <rect fill='blue' height='85.87' stroke='black' width='12' x='2400' y='1628.71' />
-  <text x='2400' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 2400,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>pipeline-maven (8587)</text>
+  <text x='2400' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 2400,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>configurationslicing (8587)</text>
   <rect fill='blue' height='85.87' stroke='black' width='12' x='2415' y='1628.71' />
-  <text x='2415' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 2415,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>configurationslicing (8587)</text>
+  <text x='2415' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 2415,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>pipeline-maven (8587)</text>
   <rect fill='blue' height='87.31' stroke='black' width='12' x='2430' y='1627.27' />
   <text x='2430' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 2430,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>postbuildscript (8731)</text>
   <rect fill='blue' height='89.21' stroke='black' width='12' x='2445' y='1625.37' />
@@ -478,9 +478,9 @@
   <rect fill='blue' height='270.36' stroke='black' width='12' x='3585' y='1444.22' />
   <text x='3585' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 3585,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>blueocean-autofavorite (27036)</text>
   <rect fill='blue' height='270.85' stroke='black' width='12' x='3600' y='1443.73' />
-  <text x='3600' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 3600,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>blueocean-display-url (27085)</text>
+  <text x='3600' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 3600,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>blueocean-github-pipeline (27085)</text>
   <rect fill='blue' height='270.85' stroke='black' width='12' x='3615' y='1443.73' />
-  <text x='3615' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 3615,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>blueocean-github-pipeline (27085)</text>
+  <text x='3615' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 3615,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>blueocean-display-url (27085)</text>
   <rect fill='blue' height='271.08' stroke='black' width='12' x='3630' y='1443.50' />
   <text x='3630' y='1719.58' font-family='Tahoma' font-size='12' transform='rotate(90 3630,1719.58)' text-rendering='optimizeSpeed' fill='#000000;'>blueocean-events (27108)</text>
   <rect fill='blue' height='271.35' stroke='black' width='12' x='3645' y='1443.23' />

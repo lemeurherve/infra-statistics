@@ -1,109 +1,17 @@
 <html>
     <head>
         <title>Plugin and Core Version Matrix for the read-only-configurations Plugin</title>
-        <style type="text/css">
-body, table {
-    font-family: monospace;
-}
-table {
-    border-collapse: collapse;
-    border: 1px solid #FF0000;
-}
-
-table td, table th {
-    border: 1px solid #FF0000;
-    text-align: center;
-    padding: 3px;
-}
-tr.lts {
-    background-color: #eef;
-}
-td.subtotal {
-    background-color: #ccc;
-}
-        </style>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="pluginversions.css" />
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src="pluginversions.js"></script>
         <script type="text/javascript">
 $(document).ready(function() {
+    var versionData = {"1.7":{"1.481":1,"1.484":1,"1.506":1,"1.509.4":1,"1.518":1,"1.525":1,"1.529":1,"1.532.1":1,"1.533":1,"1.542":1,"1.553":1,"1.555":1,"1.565.1":1,"1.565.3":1,"1.568":1,"1.570":1,"1.572":1,"1.596.2":1,"1.651.1":2,"2.121.1":1,"2.138.1":1,"2.89.2":1},"1.4":{"1.596":1},"1.10":{"1.467":1,"1.531":2,"1.535":1,"1.540":1,"1.562":1,"1.565.3":1,"1.566":1,"1.578":1,"1.580.1":1,"1.580.3":7,"1.582":1,"1.583":1,"1.588":2,"1.589":1,"1.590":1,"1.595":2,"1.596":1,"1.596.2":36,"1.596.3":1,"1.598":1,"1.602":2,"1.608":1,"1.609":1,"1.609.1":4,"1.609.2":1,"1.609.3":2,"1.611":2,"1.612":1,"1.614":1,"1.615":1,"1.617":2,"1.620":2,"1.623":2,"1.625":1,"1.625.2":8,"1.625.3":5,"1.626":2,"1.627":1,"1.634":3,"1.637":1,"1.638":4,"1.639":12,"1.640":3,"1.642.1":8,"1.642.4":5,"1.643":3,"1.644":3,"1.651.1":14,"1.651.2":1,"1.651.3":19,"1.654":2,"1.655":1,"1.656":1,"1.658":7,"2.10":1,"2.100":2,"2.101":2,"2.102":3,"2.103":2,"2.104":1,"2.107":1,"2.107.1":11,"2.107.2":17,"2.107.3":17,"2.108":1,"2.109":2,"2.11":1,"2.110":1,"2.111":1,"2.112":1,"2.113":1,"2.117":4,"2.118":1,"2.119":1,"2.121":2,"2.121.1":16,"2.121.2":21,"2.121.3":20,"2.122":1,"2.124":3,"2.125":1,"2.126":1,"2.127":2,"2.128":2,"2.129":5,"2.13":1,"2.130":1,"2.131":4,"2.134":4,"2.136":3,"2.137":2,"2.138":2,"2.138.1":26,"2.138.2":29,"2.138.3":24,"2.14":1,"2.140":9,"2.141":7,"2.142":1,"2.143":3,"2.144":2,"2.145":3,"2.146":2,"2.147":3,"2.148":2,"2.149":1,"2.150":4,"2.150.1":46,"2.150.2":87,"2.150.3":48,"2.151":6,"2.152":4,"2.153":1,"2.154":2,"2.155":4,"2.156":23,"2.157":4,"2.158":1,"2.159":2,"2.160":1,"2.161":3,"2.162":9,"2.163":7,"2.164":9,"2.165":17,"2.166":12,"2.17":1,"2.19":2,"2.19.1":4,"2.19.2":2,"2.19.3":1,"2.19.4":7,"2.2":1,"2.23":1,"2.24":2,"2.27":1,"2.30":1,"2.32":1,"2.32.1":7,"2.32.2":5,"2.32.3":4,"2.33":1,"2.35":1,"2.36":2,"2.45":3,"2.46.1":4,"2.46.2":28,"2.46.3":6,"2.51":1,"2.54":1,"2.55":1,"2.60":2,"2.60.1":1,"2.60.2":3,"2.60.3":8,"2.61":2,"2.62":3,"2.64":1,"2.65":2,"2.67":2,"2.68":1,"2.7.1":5,"2.7.2":15,"2.7.3":1,"2.7.4":5,"2.71":1,"2.72":1,"2.73.1":5,"2.73.2":7,"2.73.3":16,"2.74":3,"2.75":1,"2.76":5,"2.8":4,"2.82":1,"2.83":2,"2.87":2,"2.88":3,"2.89":2,"2.89.1":1,"2.89.2":45,"2.89.3":11,"2.89.4":20,"2.90":1,"2.91":1,"2.92":2,"2.93":2,"2.94":1,"2.98":1},"1.0":{"1.466":1,"1.542":1}};
 
-    var versionData = {"1.7":{"1.478":1,"1.481":1,"1.484":1,"1.506":1,"1.509.4":1,"1.518":1,"1.522":1,"1.525":1,"1.532.1":1,"1.542":1,"1.553":1,"1.554.1":1,"1.555":1,"1.565.1":1,"1.565.3":1,"1.567":1,"1.568":1,"1.570":1,"1.651.1":2,"2.121.1":1,"2.138.1":1,"2.7.4":1,"2.89.2":1},"1.4":{"1.596":1},"1.10":{"1.467":1,"1.531":2,"1.535":1,"1.540":1,"1.562":1,"1.565.3":1,"1.566":1,"1.578":1,"1.579":1,"1.580.1":1,"1.580.3":6,"1.582":1,"1.583":1,"1.588":1,"1.589":1,"1.590":1,"1.595":2,"1.596":1,"1.596.2":24,"1.596.3":1,"1.598":2,"1.602":1,"1.608":1,"1.609":1,"1.609.1":3,"1.609.2":1,"1.609.3":4,"1.611":2,"1.612":1,"1.614":1,"1.615":1,"1.617":2,"1.620":2,"1.623":2,"1.624":1,"1.625":1,"1.625.2":9,"1.625.3":5,"1.626":2,"1.627":1,"1.634":3,"1.637":2,"1.638":4,"1.639":11,"1.640":3,"1.641":1,"1.642.1":5,"1.642.4":4,"1.643":3,"1.644":3,"1.651.1":12,"1.651.2":2,"1.651.3":21,"1.654":2,"1.655":1,"1.656":2,"1.658":6,"2.10":1,"2.100":2,"2.101":2,"2.102":4,"2.103":2,"2.107":2,"2.107.1":9,"2.107.2":16,"2.107.3":14,"2.108":3,"2.109":4,"2.11":2,"2.110":2,"2.111":3,"2.112":1,"2.113":1,"2.117":4,"2.118":2,"2.119":1,"2.121":2,"2.121.1":16,"2.121.2":23,"2.121.3":23,"2.122":1,"2.124":3,"2.125":2,"2.126":1,"2.127":2,"2.128":2,"2.129":5,"2.131":3,"2.134":4,"2.135":1,"2.136":1,"2.137":2,"2.138":3,"2.138.1":39,"2.138.2":48,"2.138.3":30,"2.138.4":2,"2.14":1,"2.140":1,"2.141":8,"2.142":2,"2.143":3,"2.144":3,"2.145":1,"2.146":3,"2.147":12,"2.148":6,"2.149":1,"2.150":5,"2.150.1":75,"2.151":9,"2.152":6,"2.153":4,"2.154":6,"2.155":9,"2.156":19,"2.16":1,"2.17":1,"2.19":2,"2.19.1":3,"2.19.2":2,"2.19.3":2,"2.19.4":8,"2.2":1,"2.23":1,"2.24":2,"2.27":1,"2.30":2,"2.32.1":8,"2.32.2":7,"2.32.3":3,"2.33":2,"2.35":1,"2.36":3,"2.45":4,"2.46.1":5,"2.46.2":29,"2.46.3":6,"2.51":1,"2.54":1,"2.55":1,"2.60":2,"2.60.1":2,"2.60.2":4,"2.60.3":11,"2.61":3,"2.62":3,"2.64":2,"2.65":1,"2.67":9,"2.68":1,"2.7.1":7,"2.7.2":17,"2.7.3":2,"2.7.4":8,"2.70":1,"2.72":1,"2.73":1,"2.73.1":4,"2.73.2":10,"2.73.3":34,"2.74":4,"2.75":1,"2.76":6,"2.8":5,"2.82":1,"2.83":2,"2.87":2,"2.88":3,"2.89":2,"2.89.1":2,"2.89.2":53,"2.89.3":13,"2.89.4":28,"2.90":1,"2.91":1,"2.92":3,"2.93":1,"2.94":1,"2.97":2,"2.98":2},"1.0":{"1.466":1,"1.542":1}};
-
-    var pluginVersionsSet = new Set();
-
-    var coreVersionsSet = new Set();
-
-    var totalInstallsPerPluginVersion = new Map();
-
-    var totalInstalls = 0
-
-    for (var pluginVersion in versionData) {
-        if (/^\d[\d.]*\d$/.test(pluginVersion)) {
-            pluginVersionsSet.add(pluginVersion);
-            if (!totalInstallsPerPluginVersion.has(pluginVersion)) {
-                totalInstallsPerPluginVersion[pluginVersion] = 0;
-            }
-            for (var coreVersion in versionData[pluginVersion]) {
-                if (/^[12][.]\d+(|[.]\d)$/.test(coreVersion)) {
-                    coreVersionsSet.add(coreVersion);
-                    totalInstalls += versionData[pluginVersion][coreVersion];
-                    totalInstallsPerPluginVersion[pluginVersion] += versionData[pluginVersion][coreVersion];
-                }
-            }
-        }
-    }
-
-    var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
-
-    var pluginVersions = Array.from(pluginVersionsSet);
-    pluginVersions.sort(collator.compare);
-
-    var coreVersions = Array.from(coreVersionsSet);
-    coreVersions.sort(collator.compare);
-
-    var thisCoreVersionOrOlderPerPluginVersion = {};
-
-    // header row
-    var row = $("<tr>");
-    row.append($("<th>").html("read-only-configurations - " + totalInstalls));
-    for (let pluginVersion of pluginVersions) {
-        row.append($("<th>").html(pluginVersion));
-        thisCoreVersionOrOlderPerPluginVersion[pluginVersion] = 0;
-    }
-    row.append($("<th>").html("Sum"));
-    row.appendTo('#versionsContainer');
-
-
-    var thisCoreVersionOrOlder = 0
-
-    // value rows
-    for (let coreVersion of coreVersions) {
-        var row = $("<tr>");
-        if (/^\d[.]\d+[.]\d$/.test(coreVersion)) {
-            row.addClass('lts');
-        }
-        row.append($("<th>").html(coreVersion));
-        var thisCoreVersion = 0;
-        for (let pluginVersion of pluginVersions) {
-            var cnt = versionData[pluginVersion][coreVersion];
-            if (cnt == null) {
-                cnt = 0;
-            }
-            thisCoreVersion += cnt;
-            var title = pluginVersion + " on " + coreVersion + ": " + cnt + " installs (" + Math.round(cnt/totalInstalls*100) + "%)";
-            title += " - " + Math.round((1-thisCoreVersionOrOlderPerPluginVersion[pluginVersion]/totalInstallsPerPluginVersion[pluginVersion])*100) + "% of " + pluginVersion + " installs are on this core version or newer";
-            row.append($("<td>").attr("title", title).css("opacity", Math.max(0.1, cnt*100/totalInstalls)).html(cnt));
-
-            thisCoreVersionOrOlderPerPluginVersion[pluginVersion] += cnt;
-        }
-
-        var title = coreVersion + " total: " + thisCoreVersion + " installs (" + Math.round(thisCoreVersion/totalInstalls*100) + "%)";
-        title += " - " + Math.round((1-thisCoreVersionOrOlder/totalInstalls)*100) + "% of plugin installs are on this core version or newer";
-        row.append($("<td>").addClass("subtotal").attr("title", title).html(thisCoreVersion));
-
-        thisCoreVersionOrOlder += thisCoreVersion;
-
-        row.appendTo('#versionsContainer');
-    }
+    parseData(versionData, "read-only-configurations");
 });
         </script>
     </head>

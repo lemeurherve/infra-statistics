@@ -1,109 +1,17 @@
 <html>
     <head>
         <title>Plugin and Core Version Matrix for the svn-partial-release-mgr Plugin</title>
-        <style type="text/css">
-body, table {
-    font-family: monospace;
-}
-table {
-    border-collapse: collapse;
-    border: 1px solid #FF0000;
-}
-
-table td, table th {
-    border: 1px solid #FF0000;
-    text-align: center;
-    padding: 3px;
-}
-tr.lts {
-    background-color: #eef;
-}
-td.subtotal {
-    background-color: #ccc;
-}
-        </style>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="pluginversions.css" />
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src="pluginversions.js"></script>
         <script type="text/javascript">
 $(document).ready(function() {
+    var versionData = {"1.0.1":{"1.643":1,"1.651.3":2,"2.100":1,"2.101":1,"2.102":1,"2.104":2,"2.105":2,"2.106":1,"2.107":1,"2.107.1":8,"2.107.2":9,"2.107.3":8,"2.109":2,"2.11":1,"2.110":3,"2.112":3,"2.113":1,"2.114":3,"2.116":1,"2.117":2,"2.118":1,"2.119":1,"2.121":1,"2.121.1":12,"2.121.2":16,"2.121.3":15,"2.122":2,"2.124":2,"2.125":1,"2.126":3,"2.128":4,"2.129":7,"2.130":2,"2.132":1,"2.134":8,"2.135":2,"2.136":8,"2.137":2,"2.138":8,"2.138.1":22,"2.138.2":28,"2.138.3":19,"2.140":1,"2.141":5,"2.142":1,"2.143":3,"2.144":2,"2.145":3,"2.146":2,"2.147":6,"2.148":5,"2.149":6,"2.150":6,"2.150.1":70,"2.150.2":77,"2.150.3":62,"2.151":8,"2.152":12,"2.153":7,"2.154":6,"2.155":7,"2.156":14,"2.157":7,"2.158":3,"2.159":5,"2.160":6,"2.161":7,"2.162":11,"2.163":14,"2.164":14,"2.165":37,"2.166":11,"2.19.3":1,"2.30":1,"2.32.1":1,"2.32.2":1,"2.37":1,"2.38":1,"2.46.1":2,"2.46.2":3,"2.60.1":1,"2.60.2":2,"2.60.3":7,"2.62":1,"2.64":1,"2.7.1":1,"2.7.2":1,"2.7.3":1,"2.7.4":3,"2.70":1,"2.72":1,"2.73.1":2,"2.73.2":6,"2.73.3":10,"2.74":2,"2.77":1,"2.78":2,"2.79":1,"2.80":3,"2.82":1,"2.83":2,"2.86":3,"2.87":1,"2.88":1,"2.89.2":10,"2.89.3":8,"2.89.4":7,"2.91":2,"2.92":1,"2.95":1,"2.98":3}};
 
-    var versionData = {"1.0.1":{"1.590":1,"1.643":1,"1.651.3":2,"2.10":1,"2.101":1,"2.102":2,"2.103":3,"2.104":3,"2.105":3,"2.106":1,"2.107":2,"2.107.1":5,"2.107.2":16,"2.107.3":13,"2.109":3,"2.11":2,"2.110":4,"2.112":2,"2.113":1,"2.114":3,"2.117":1,"2.118":1,"2.119":1,"2.121":2,"2.121.1":22,"2.121.2":26,"2.121.3":25,"2.122":8,"2.124":2,"2.125":1,"2.126":3,"2.127":1,"2.128":3,"2.129":7,"2.130":5,"2.131":3,"2.132":1,"2.134":9,"2.135":7,"2.136":11,"2.137":3,"2.138":9,"2.138.1":30,"2.138.2":53,"2.138.3":66,"2.138.4":1,"2.140":6,"2.141":14,"2.143":4,"2.144":6,"2.145":5,"2.146":4,"2.147":10,"2.148":8,"2.149":9,"2.150":15,"2.150.1":119,"2.151":14,"2.152":13,"2.153":20,"2.154":13,"2.155":28,"2.156":38,"2.19.3":2,"2.30":1,"2.32.1":1,"2.32.2":1,"2.32.3":1,"2.37":1,"2.38":1,"2.46.1":1,"2.46.2":3,"2.46.3":1,"2.59":1,"2.60.1":1,"2.60.2":4,"2.60.3":8,"2.62":1,"2.64":2,"2.66":1,"2.67":1,"2.68":1,"2.7.1":2,"2.7.3":3,"2.7.4":2,"2.70":1,"2.71":1,"2.72":1,"2.73.1":2,"2.73.2":6,"2.73.3":9,"2.74":2,"2.77":1,"2.78":2,"2.79":3,"2.80":3,"2.82":1,"2.83":1,"2.86":2,"2.87":2,"2.88":1,"2.89.1":1,"2.89.2":9,"2.89.3":8,"2.89.4":12,"2.90":1,"2.91":2,"2.95":2,"2.97":1,"2.98":3}};
-
-    var pluginVersionsSet = new Set();
-
-    var coreVersionsSet = new Set();
-
-    var totalInstallsPerPluginVersion = new Map();
-
-    var totalInstalls = 0
-
-    for (var pluginVersion in versionData) {
-        if (/^\d[\d.]*\d$/.test(pluginVersion)) {
-            pluginVersionsSet.add(pluginVersion);
-            if (!totalInstallsPerPluginVersion.has(pluginVersion)) {
-                totalInstallsPerPluginVersion[pluginVersion] = 0;
-            }
-            for (var coreVersion in versionData[pluginVersion]) {
-                if (/^[12][.]\d+(|[.]\d)$/.test(coreVersion)) {
-                    coreVersionsSet.add(coreVersion);
-                    totalInstalls += versionData[pluginVersion][coreVersion];
-                    totalInstallsPerPluginVersion[pluginVersion] += versionData[pluginVersion][coreVersion];
-                }
-            }
-        }
-    }
-
-    var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
-
-    var pluginVersions = Array.from(pluginVersionsSet);
-    pluginVersions.sort(collator.compare);
-
-    var coreVersions = Array.from(coreVersionsSet);
-    coreVersions.sort(collator.compare);
-
-    var thisCoreVersionOrOlderPerPluginVersion = {};
-
-    // header row
-    var row = $("<tr>");
-    row.append($("<th>").html("svn-partial-release-mgr - " + totalInstalls));
-    for (let pluginVersion of pluginVersions) {
-        row.append($("<th>").html(pluginVersion));
-        thisCoreVersionOrOlderPerPluginVersion[pluginVersion] = 0;
-    }
-    row.append($("<th>").html("Sum"));
-    row.appendTo('#versionsContainer');
-
-
-    var thisCoreVersionOrOlder = 0
-
-    // value rows
-    for (let coreVersion of coreVersions) {
-        var row = $("<tr>");
-        if (/^\d[.]\d+[.]\d$/.test(coreVersion)) {
-            row.addClass('lts');
-        }
-        row.append($("<th>").html(coreVersion));
-        var thisCoreVersion = 0;
-        for (let pluginVersion of pluginVersions) {
-            var cnt = versionData[pluginVersion][coreVersion];
-            if (cnt == null) {
-                cnt = 0;
-            }
-            thisCoreVersion += cnt;
-            var title = pluginVersion + " on " + coreVersion + ": " + cnt + " installs (" + Math.round(cnt/totalInstalls*100) + "%)";
-            title += " - " + Math.round((1-thisCoreVersionOrOlderPerPluginVersion[pluginVersion]/totalInstallsPerPluginVersion[pluginVersion])*100) + "% of " + pluginVersion + " installs are on this core version or newer";
-            row.append($("<td>").attr("title", title).css("opacity", Math.max(0.1, cnt*100/totalInstalls)).html(cnt));
-
-            thisCoreVersionOrOlderPerPluginVersion[pluginVersion] += cnt;
-        }
-
-        var title = coreVersion + " total: " + thisCoreVersion + " installs (" + Math.round(thisCoreVersion/totalInstalls*100) + "%)";
-        title += " - " + Math.round((1-thisCoreVersionOrOlder/totalInstalls)*100) + "% of plugin installs are on this core version or newer";
-        row.append($("<td>").addClass("subtotal").attr("title", title).html(thisCoreVersion));
-
-        thisCoreVersionOrOlder += thisCoreVersion;
-
-        row.appendTo('#versionsContainer');
-    }
+    parseData(versionData, "svn-partial-release-mgr");
 });
         </script>
     </head>

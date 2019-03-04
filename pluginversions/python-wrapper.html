@@ -1,109 +1,17 @@
 <html>
     <head>
         <title>Plugin and Core Version Matrix for the python-wrapper Plugin</title>
-        <style type="text/css">
-body, table {
-    font-family: monospace;
-}
-table {
-    border-collapse: collapse;
-    border: 1px solid #FF0000;
-}
-
-table td, table th {
-    border: 1px solid #FF0000;
-    text-align: center;
-    padding: 3px;
-}
-tr.lts {
-    background-color: #eef;
-}
-td.subtotal {
-    background-color: #ccc;
-}
-        </style>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="pluginversions.css" />
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src="pluginversions.js"></script>
         <script type="text/javascript">
 $(document).ready(function() {
+    var versionData = {"1.0.3":{"1.535":1,"1.544":1,"1.546":1,"1.562":1,"1.568":1,"1.575":1,"1.579":1,"1.583":1,"1.586":1,"1.591":1,"1.596":1,"1.598":3,"1.599":1,"1.604":1,"1.606":1,"1.609":2,"1.609.2":2,"1.611":1,"1.617":1,"1.618":1,"1.619":1,"1.620":1,"1.623":1,"1.625":2,"1.625.2":3,"1.625.3":3,"1.626":2,"1.629":1,"1.630":1,"1.631":1,"1.632":1,"1.636":2,"1.638":1,"1.641":1,"1.642.4":4,"1.643":2,"1.644":1,"1.651.1":4,"1.651.2":9,"1.651.3":3,"1.653":1,"1.656":2,"1.658":3,"2.0":2,"2.0-alpha-4":1,"2.1":2,"2.10":2,"2.100":1,"2.101":5,"2.103":2,"2.104":4,"2.105":2,"2.106":1,"2.107":4,"2.107.1":12,"2.107.2":22,"2.107.3":26,"2.108":1,"2.109":2,"2.11":1,"2.110":1,"2.111":3,"2.112":5,"2.113":4,"2.114":4,"2.116":3,"2.117":3,"2.118":2,"2.12":1,"2.121":2,"2.121.1":26,"2.121.2":34,"2.121.3":33,"2.122":4,"2.124":3,"2.125":2,"2.126":4,"2.127":5,"2.128":6,"2.129":4,"2.130":5,"2.131":4,"2.132":3,"2.133":6,"2.134":7,"2.135":5,"2.136":15,"2.137":2,"2.138":8,"2.138.1":48,"2.138.2":54,"2.138.3":59,"2.138.4":2,"2.14":1,"2.140":6,"2.141":18,"2.142":1,"2.143":3,"2.144":5,"2.145":2,"2.146":4,"2.147":10,"2.148":6,"2.149":9,"2.15":1,"2.150":8,"2.150.1":108,"2.150.2":191,"2.150.3":184,"2.151":11,"2.152":5,"2.153":8,"2.154":8,"2.155":8,"2.156":31,"2.157":10,"2.158":4,"2.159":4,"2.160":5,"2.161":21,"2.162":19,"2.163":34,"2.164":34,"2.165":54,"2.166":31,"2.18":1,"2.19":1,"2.19.1":5,"2.19.2":1,"2.19.3":1,"2.19.4":7,"2.2":2,"2.20":2,"2.23":1,"2.24":1,"2.27":1,"2.28":1,"2.31":2,"2.32":1,"2.32.1":3,"2.32.2":8,"2.32.3":4,"2.33":2,"2.34":1,"2.35":1,"2.36":2,"2.39":1,"2.4":1,"2.41":1,"2.45":1,"2.46":3,"2.46.2":10,"2.46.3":12,"2.47":2,"2.5":1,"2.53":1,"2.54":1,"2.6":2,"2.60.1":9,"2.60.2":6,"2.60.3":19,"2.64":2,"2.65":1,"2.66":2,"2.69":3,"2.7":3,"2.7.1":8,"2.7.2":3,"2.7.3":1,"2.7.4":1,"2.70":3,"2.71":2,"2.72":1,"2.73":3,"2.73.1":4,"2.73.2":8,"2.73.3":15,"2.74":3,"2.76":1,"2.78":1,"2.85":1,"2.89":1,"2.89.1":3,"2.89.2":16,"2.89.3":16,"2.89.4":25,"2.9":16,"2.91":1,"2.92":2,"2.93":1,"2.94":1,"2.95":3,"2.97":1,"2.98":5,"2.99":1},"1.0.2":{"1.572":1,"1.580.1":2,"1.651.3":2,"2.46.3":1,"2.7.4":1},"1.0":{"1.615":1,"1.634":1}};
 
-    var versionData = {"1.0.3":{"1.535":1,"1.542":1,"1.544":1,"1.546":1,"1.554":1,"1.562":1,"1.568":1,"1.575":1,"1.579":1,"1.583":1,"1.598":3,"1.601":1,"1.604":1,"1.606":1,"1.608":1,"1.609":1,"1.609.2":2,"1.609.3":1,"1.616":1,"1.617":1,"1.618":1,"1.623":1,"1.625":1,"1.625.1":1,"1.625.2":3,"1.625.3":3,"1.626":2,"1.629":1,"1.630":1,"1.631":1,"1.632":1,"1.636":2,"1.638":2,"1.641":1,"1.642.4":5,"1.643":3,"1.644":1,"1.651.1":5,"1.651.2":7,"1.651.3":3,"1.653":1,"1.656":3,"1.658":3,"2.0":2,"2.1":2,"2.10":1,"2.100":2,"2.101":5,"2.103":4,"2.104":3,"2.105":5,"2.106":1,"2.107":2,"2.107.1":18,"2.107.2":23,"2.107.3":27,"2.108":1,"2.109":3,"2.11":1,"2.110":2,"2.111":3,"2.112":3,"2.113":4,"2.114":3,"2.116":1,"2.117":4,"2.118":3,"2.119":1,"2.12":2,"2.120":2,"2.121":4,"2.121.1":32,"2.121.2":44,"2.121.3":52,"2.122":6,"2.124":4,"2.125":4,"2.126":4,"2.127":3,"2.128":6,"2.129":7,"2.130":6,"2.131":4,"2.132":2,"2.133":5,"2.134":9,"2.135":7,"2.136":15,"2.137":3,"2.138":16,"2.138.1":66,"2.138.2":81,"2.138.3":137,"2.138.4":4,"2.14":2,"2.140":7,"2.141":17,"2.142":1,"2.143":5,"2.144":6,"2.145":12,"2.146":5,"2.147":17,"2.148":10,"2.149":14,"2.15":1,"2.150":16,"2.150.1":265,"2.151":17,"2.152":12,"2.153":33,"2.154":21,"2.155":39,"2.156":82,"2.18":1,"2.19":1,"2.19.1":7,"2.19.2":1,"2.19.3":1,"2.19.4":6,"2.2":2,"2.20":2,"2.21":1,"2.23":1,"2.24":1,"2.27":1,"2.28":1,"2.30":3,"2.31":2,"2.32.1":3,"2.32.2":8,"2.32.3":4,"2.33":1,"2.34":1,"2.36":2,"2.4":2,"2.41":1,"2.45":1,"2.46":2,"2.46.2":13,"2.46.3":14,"2.47":3,"2.5":1,"2.51":1,"2.52":1,"2.53":1,"2.54":1,"2.56":1,"2.6":2,"2.60.1":7,"2.60.2":10,"2.60.3":25,"2.61":2,"2.64":2,"2.65":1,"2.66":2,"2.68":1,"2.69":4,"2.7":5,"2.7.1":8,"2.7.2":6,"2.7.3":2,"2.7.4":4,"2.70":3,"2.71":3,"2.72":1,"2.73":3,"2.73.1":4,"2.73.2":11,"2.73.3":15,"2.74":4,"2.76":1,"2.77":2,"2.78":1,"2.8":1,"2.85":1,"2.86":1,"2.89":1,"2.89.1":3,"2.89.2":20,"2.89.3":15,"2.89.4":25,"2.9":11,"2.90":1,"2.91":2,"2.92":2,"2.93":1,"2.94":2,"2.95":3,"2.96":1,"2.97":1,"2.98":5,"2.99":1},"1.0.2":{"1.580.1":2,"1.651.3":2,"2.46.3":1},"1.0":{"1.556":1,"1.615":1,"1.634":1}};
-
-    var pluginVersionsSet = new Set();
-
-    var coreVersionsSet = new Set();
-
-    var totalInstallsPerPluginVersion = new Map();
-
-    var totalInstalls = 0
-
-    for (var pluginVersion in versionData) {
-        if (/^\d[\d.]*\d$/.test(pluginVersion)) {
-            pluginVersionsSet.add(pluginVersion);
-            if (!totalInstallsPerPluginVersion.has(pluginVersion)) {
-                totalInstallsPerPluginVersion[pluginVersion] = 0;
-            }
-            for (var coreVersion in versionData[pluginVersion]) {
-                if (/^[12][.]\d+(|[.]\d)$/.test(coreVersion)) {
-                    coreVersionsSet.add(coreVersion);
-                    totalInstalls += versionData[pluginVersion][coreVersion];
-                    totalInstallsPerPluginVersion[pluginVersion] += versionData[pluginVersion][coreVersion];
-                }
-            }
-        }
-    }
-
-    var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
-
-    var pluginVersions = Array.from(pluginVersionsSet);
-    pluginVersions.sort(collator.compare);
-
-    var coreVersions = Array.from(coreVersionsSet);
-    coreVersions.sort(collator.compare);
-
-    var thisCoreVersionOrOlderPerPluginVersion = {};
-
-    // header row
-    var row = $("<tr>");
-    row.append($("<th>").html("python-wrapper - " + totalInstalls));
-    for (let pluginVersion of pluginVersions) {
-        row.append($("<th>").html(pluginVersion));
-        thisCoreVersionOrOlderPerPluginVersion[pluginVersion] = 0;
-    }
-    row.append($("<th>").html("Sum"));
-    row.appendTo('#versionsContainer');
-
-
-    var thisCoreVersionOrOlder = 0
-
-    // value rows
-    for (let coreVersion of coreVersions) {
-        var row = $("<tr>");
-        if (/^\d[.]\d+[.]\d$/.test(coreVersion)) {
-            row.addClass('lts');
-        }
-        row.append($("<th>").html(coreVersion));
-        var thisCoreVersion = 0;
-        for (let pluginVersion of pluginVersions) {
-            var cnt = versionData[pluginVersion][coreVersion];
-            if (cnt == null) {
-                cnt = 0;
-            }
-            thisCoreVersion += cnt;
-            var title = pluginVersion + " on " + coreVersion + ": " + cnt + " installs (" + Math.round(cnt/totalInstalls*100) + "%)";
-            title += " - " + Math.round((1-thisCoreVersionOrOlderPerPluginVersion[pluginVersion]/totalInstallsPerPluginVersion[pluginVersion])*100) + "% of " + pluginVersion + " installs are on this core version or newer";
-            row.append($("<td>").attr("title", title).css("opacity", Math.max(0.1, cnt*100/totalInstalls)).html(cnt));
-
-            thisCoreVersionOrOlderPerPluginVersion[pluginVersion] += cnt;
-        }
-
-        var title = coreVersion + " total: " + thisCoreVersion + " installs (" + Math.round(thisCoreVersion/totalInstalls*100) + "%)";
-        title += " - " + Math.round((1-thisCoreVersionOrOlder/totalInstalls)*100) + "% of plugin installs are on this core version or newer";
-        row.append($("<td>").addClass("subtotal").attr("title", title).html(thisCoreVersion));
-
-        thisCoreVersionOrOlder += thisCoreVersion;
-
-        row.appendTo('#versionsContainer');
-    }
+    parseData(versionData, "python-wrapper");
 });
         </script>
     </head>

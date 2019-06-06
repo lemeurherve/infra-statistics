@@ -1,19 +1,19 @@
 {
     "name": "pipeline-gitstatuswrapper",
     "installations": {
-        "1554091200000": 44
+        "1554091200000": 44,
+        "1556683200000": 127
     },
     "installationsPercentage": {
-        "1554091200000": 0.01738560077128847
+        "1554091200000": 0.01738560077128847,
+        "1556683200000": 0.049281537273528055
     },
     "installationsPerVersion": {
-        "1.0.0": 42,
-        "1.0.1-SNAPSHOT (private)": 1,
-        "1.1.0-beta-2-SNAPSHOT (private)": 1
+        "1.0.0": 21,
+        "1.2.0": 106
     },
     "installationsPercentagePerVersion": {
-        "1.0.0": 0.016595346190775358,
-        "1.0.1-SNAPSHOT (private)": 3.9512729025655615E-4,
-        "1.1.0-beta-2-SNAPSHOT (private)": 3.9512729025655615E-4
+        "1.0.0": 0.008148915612158181,
+        "1.2.0": 0.04113262166136987
     }
 }

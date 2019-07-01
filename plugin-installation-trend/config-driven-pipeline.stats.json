@@ -1,15 +1,19 @@
 {
     "name": "config-driven-pipeline",
     "installations": {
-        "1556683200000": 44
+        "1556683200000": 44,
+        "1559361600000": 63
     },
     "installationsPercentage": {
-        "1556683200000": 0.017073918425474285
+        "1556683200000": 0.017073918425474285,
+        "1559361600000": 0.025029598493456547
     },
     "installationsPerVersion": {
-        "1.1": 44
+        "1.1": 62,
+        "1.2-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.1": 0.017073918425474285
+        "1.1": 0.0246323032792747,
+        "1.2-SNAPSHOT (private)": 3.9729521418185E-4
     }
 }

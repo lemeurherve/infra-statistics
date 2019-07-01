@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Plugin and Core Version Matrix for the adoptopenjdk Plugin</title>
+        <link rel="stylesheet" type="text/css" href="pluginversions.css" />
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src="pluginversions.js"></script>
+        <script type="text/javascript">
+$(document).ready(function() {
+    var versionData = {"1.1":{"2.164.2":3,"2.164.3":26,"2.167":1,"2.171":1,"2.173":2,"2.176.1":50,"2.178":2,"2.179":9,"2.180":7,"2.181":8,"2.182":7}};
+
+    parseData(versionData, "adoptopenjdk");
+});
+        </script>
+    </head>
+    <body>
+        <table id="versionsContainer"></table>
+    </body>
+</html>

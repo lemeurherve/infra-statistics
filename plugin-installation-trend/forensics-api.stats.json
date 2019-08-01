@@ -1,15 +1,21 @@
 {
     "name": "forensics-api",
     "installations": {
-        "1559361600000": 1
+        "1559361600000": 1,
+        "1561953600000": 49
     },
     "installationsPercentage": {
-        "1559361600000": 3.9729521418185E-4
+        "1559361600000": 3.9729521418185E-4,
+        "1561953600000": 0.018424100227105236
     },
     "installationsPerVersion": {
-        "0.1-alpha-6-SNAPSHOT (private)": 1
+        "0.1-SNAPSHOT (private)": 1,
+        "0.1.1": 47,
+        "0.1.2-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "0.1-alpha-6-SNAPSHOT (private)": 3.9729521418185E-4
+        "0.1-SNAPSHOT (private)": 3.7600204545112725E-4,
+        "0.1.1": 0.01767209613620298,
+        "0.1.2-SNAPSHOT (private)": 3.7600204545112725E-4
     }
 }

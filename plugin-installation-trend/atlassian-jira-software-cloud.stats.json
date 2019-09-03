@@ -1,19 +1,33 @@
 {
     "name": "atlassian-jira-software-cloud",
     "installations": {
-        "1561953600000": 10
+        "1561953600000": 10,
+        "1564632000000": 59
     },
     "installationsPercentage": {
-        "1561953600000": 0.0037600204545112726
+        "1561953600000": 0.0037600204545112726,
+        "1564632000000": 0.022490155791977495
     },
     "installationsPerVersion": {
-        "1.0.0-alpha-1-SNAPSHOT (private)": 3,
-        "1.0.0-alpha-2": 3,
-        "1.0.0-alpha-3-SNAPSHOT (private)": 4
+        "1.0.0": 6,
+        "1.0.0-alpha-1-SNAPSHOT (private)": 1,
+        "1.0.0-alpha-2": 2,
+        "1.0.0-alpha-3-SNAPSHOT (private)": 1,
+        "1.0.0-beta-1": 9,
+        "1.0.0-beta-2": 1,
+        "1.0.0-beta-2-SNAPSHOT (private)": 1,
+        "1.0.1": 37,
+        "1.0.1-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.0.0-alpha-1-SNAPSHOT (private)": 0.0011280061363533817,
-        "1.0.0-alpha-2": 0.0011280061363533817,
-        "1.0.0-alpha-3-SNAPSHOT (private)": 0.001504008181804509
+        "1.0.0": 0.002287134487319745,
+        "1.0.0-alpha-1-SNAPSHOT (private)": 3.8118908121995756E-4,
+        "1.0.0-alpha-2": 7.623781624399151E-4,
+        "1.0.0-alpha-3-SNAPSHOT (private)": 3.8118908121995756E-4,
+        "1.0.0-beta-1": 0.003430701730979618,
+        "1.0.0-beta-2": 3.8118908121995756E-4,
+        "1.0.0-beta-2-SNAPSHOT (private)": 3.8118908121995756E-4,
+        "1.0.1": 0.014103996005138428,
+        "1.0.1-SNAPSHOT (private)": 3.8118908121995756E-4
     }
 }

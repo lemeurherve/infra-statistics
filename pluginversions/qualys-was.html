@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Plugin and Core Version Matrix for the qualys-was Plugin</title>
+        <link rel="stylesheet" type="text/css" href="pluginversions.css" />
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src="pluginversions.js"></script>
+        <script type="text/javascript">
+$(document).ready(function() {
+    var versionData = {"2.0.4":{"2.150.2":1,"2.164.2":1,"2.190.2":1},"2.0.3":{"2.150.2":1,"2.151":1,"2.176.2":3,"2.179":1,"2.187":1,"2.190.1":1,"2.190.2":1,"2.205":1,"2.85":1,"2.89.2":1}};
+
+    parseData(versionData, "qualys-was");
+});
+        </script>
+    </head>
+    <body>
+        <table id="versionsContainer"></table>
+    </body>
+</html>

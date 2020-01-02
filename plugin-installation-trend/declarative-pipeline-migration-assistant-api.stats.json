@@ -1,15 +1,19 @@
 {
     "name": "declarative-pipeline-migration-assistant-api",
     "installations": {
-        "1572580800000": 2
+        "1572580800000": 2,
+        "1575176400000": 3
     },
     "installationsPercentage": {
-        "1572580800000": 7.414190018275979E-4
+        "1572580800000": 7.414190018275979E-4,
+        "1575176400000": 0.0011346487694734095
     },
     "installationsPerVersion": {
-        "1.0.0-SNAPSHOT (private)": 2
+        "1.0.0-SNAPSHOT (private)": 1,
+        "1.0.0-beta-3": 2
     },
     "installationsPercentagePerVersion": {
-        "1.0.0-SNAPSHOT (private)": 7.414190018275979E-4
+        "1.0.0-SNAPSHOT (private)": 3.782162564911365E-4,
+        "1.0.0-beta-3": 7.56432512982273E-4
     }
 }

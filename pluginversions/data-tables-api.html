@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Plugin and Core Version Matrix for the data-tables-api Plugin</title>
+        <link rel="stylesheet" type="text/css" href="pluginversions.css" />
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src="pluginversions.js"></script>
+        <script type="text/javascript">
+$(document).ready(function() {
+    var versionData = {"1.10.20-4-beta1":{"2.138.4":1,"2.199":1,"2.207":1,"2.209":2,"2.210":4},"1.10.20-2-beta1":{"2.190.3":2},"1.10.20-1-beta4-rc74.3b84714d81d7":{"2.164.2":1}};
+
+    parseData(versionData, "data-tables-api");
+});
+        </script>
+    </head>
+    <body>
+        <table id="versionsContainer"></table>
+    </body>
+</html>

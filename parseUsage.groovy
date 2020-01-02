@@ -93,7 +93,12 @@ def process(String timestamp/*such as '201112'*/, File logDir, File outputDir) {
             def installId = j.install
             def ver = j.version
 
-            def jobCnt = j.jobs.values().inject(0) { acc, val -> acc+ val }
+            def jobCnt = j.jobs.values().inject(0) { acc, val ->
+                if (val instanceof List) {
+                    val = 0
+                }
+                acc + val
+            }
 
             if (jobCnt > 0) {
                 mColl << j

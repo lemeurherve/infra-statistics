@@ -1,15 +1,19 @@
 {
     "name": "redeploy-rancher2-workload",
     "installations": {
-        "1575176400000": 13
+        "1575176400000": 13,
+        "1577854800000": 39
     },
     "installationsPercentage": {
-        "1575176400000": 0.004916811334384774
+        "1575176400000": 0.004916811334384774,
+        "1577854800000": 0.014598430855842367
     },
     "installationsPerVersion": {
-        "1.0.1": 13
+        "1.0.0-SNAPSHOT (private)": 1,
+        "1.0.1": 38
     },
     "installationsPercentagePerVersion": {
-        "1.0.1": 0.004916811334384774
+        "1.0.0-SNAPSHOT (private)": 3.74318739893394E-4,
+        "1.0.1": 0.014224112115948973
     }
 }

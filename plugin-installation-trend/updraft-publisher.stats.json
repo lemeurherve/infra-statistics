@@ -1,15 +1,17 @@
 {
     "name": "updraft-publisher",
     "installations": {
-        "1577854800000": 1
+        "1577854800000": 1,
+        "1580533200000": 11
     },
     "installationsPercentage": {
-        "1577854800000": 3.74318739893394E-4
+        "1577854800000": 3.74318739893394E-4,
+        "1580533200000": 0.004201151115405621
     },
     "installationsPerVersion": {
-        "1.0.2-SNAPSHOT (private)": 1
+        "1.0.2": 11
     },
     "installationsPercentagePerVersion": {
-        "1.0.2-SNAPSHOT (private)": 3.74318739893394E-4
+        "1.0.2": 0.004201151115405621
     }
 }

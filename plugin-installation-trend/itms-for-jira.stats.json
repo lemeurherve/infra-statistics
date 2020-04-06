@@ -1,17 +1,19 @@
 {
     "name": "itms-for-jira",
     "installations": {
-        "1580533200000": 7
+        "1580533200000": 7,
+        "1583038800000": 9
     },
     "installationsPercentage": {
-        "1580533200000": 0.002673459800712668
+        "1580533200000": 0.002673459800712668,
+        "1583038800000": 0.003219310137607623
     },
     "installationsPerVersion": {
-        "1.4": 6,
+        "1.4": 8,
         "1.5-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.4": 0.0022915369720394297,
-        "1.5-SNAPSHOT (private)": 3.819228286732383E-4
+        "1.4": 0.002861609011206776,
+        "1.5-SNAPSHOT (private)": 3.57701126400847E-4
     }
 }

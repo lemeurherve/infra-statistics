@@ -1,17 +1,19 @@
 {
     "name": "scm-manager",
     "installations": {
-        "1583038800000": 6
+        "1583038800000": 6,
+        "1585713600000": 30
     },
     "installationsPercentage": {
-        "1583038800000": 0.002146206758405082
+        "1583038800000": 0.002146206758405082,
+        "1585713600000": 0.010831615318792492
     },
     "installationsPerVersion": {
-        "1.0-SNAPSHOT (private)": 2,
-        "1.0.0": 4
+        "1.0-SNAPSHOT (private)": 4,
+        "1.0.0": 26
     },
     "installationsPercentagePerVersion": {
-        "1.0-SNAPSHOT (private)": 7.15402252801694E-4,
-        "1.0.0": 0.001430804505603388
+        "1.0-SNAPSHOT (private)": 0.0014442153758389988,
+        "1.0.0": 0.009387399942953492
     }
 }

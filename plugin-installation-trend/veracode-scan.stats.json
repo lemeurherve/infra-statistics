@@ -2,16 +2,24 @@
     "name": "veracode-scan",
     "installations": {
         "1580533200000": 1,
-        "1583038800000": 1
+        "1583038800000": 1,
+        "1588305600000": 8
     },
     "installationsPercentage": {
         "1580533200000": 3.819228286732383E-4,
-        "1583038800000": 3.57701126400847E-4
+        "1583038800000": 3.57701126400847E-4,
+        "1588305600000": 0.0028789301895415665
     },
     "installationsPerVersion": {
-        
+        "1.0.4-alpha-SNAPSHOT (private)": 1,
+        "1.0.5-alpha": 2,
+        "1.0.5-alpha-SNAPSHOT (private)": 1,
+        "1.0.6-alpha-SNAPSHOT (private)": 4
     },
     "installationsPercentagePerVersion": {
-        
+        "1.0.4-alpha-SNAPSHOT (private)": 3.598662736926958E-4,
+        "1.0.5-alpha": 7.197325473853916E-4,
+        "1.0.5-alpha-SNAPSHOT (private)": 3.598662736926958E-4,
+        "1.0.6-alpha-SNAPSHOT (private)": 0.0014394650947707833
     }
 }

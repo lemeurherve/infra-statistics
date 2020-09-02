@@ -1,17 +1,21 @@
 {
     "name": "generic-environment-filters",
     "installations": {
-        "1593576000000": 3
+        "1593576000000": 3,
+        "1596254400000": 7
     },
     "installationsPercentage": {
-        "1593576000000": 0.0010596475612211379
+        "1593576000000": 0.0010596475612211379,
+        "1596254400000": 0.002551615537151522
     },
     "installationsPerVersion": {
-        "1.1": 2,
-        "1.1-SNAPSHOT (private)": 1
+        "1.1": 4,
+        "1.2": 2,
+        "1.2-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.1": 7.064317074807585E-4,
-        "1.1-SNAPSHOT (private)": 3.5321585374037927E-4
+        "1.1": 0.0014580660212294412,
+        "1.2": 7.290330106147206E-4,
+        "1.2-SNAPSHOT (private)": 3.645165053073603E-4
     }
 }

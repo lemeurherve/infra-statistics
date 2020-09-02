@@ -1,19 +1,21 @@
 {
     "name": "custom-checkbox-parameter",
     "installations": {
-        "1593576000000": 27
+        "1593576000000": 27,
+        "1596254400000": 60
     },
     "installationsPercentage": {
-        "1593576000000": 0.00953682805099024
+        "1593576000000": 0.00953682805099024,
+        "1596254400000": 0.02187099031844162
     },
     "installationsPerVersion": {
-        "1.0": 25,
-        "1.0-SNAPSHOT (private)": 1,
+        "1.0": 57,
+        "1.1": 2,
         "1.2-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.0": 0.008830396343509482,
-        "1.0-SNAPSHOT (private)": 3.5321585374037927E-4,
-        "1.2-SNAPSHOT (private)": 3.5321585374037927E-4
+        "1.0": 0.020777440802519538,
+        "1.1": 7.290330106147206E-4,
+        "1.2-SNAPSHOT (private)": 3.645165053073603E-4
     }
 }

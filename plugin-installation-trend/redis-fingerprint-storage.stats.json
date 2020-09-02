@@ -1,15 +1,19 @@
 {
     "name": "redis-fingerprint-storage",
     "installations": {
-        "1593576000000": 1
+        "1593576000000": 1,
+        "1596254400000": 3
     },
     "installationsPercentage": {
-        "1593576000000": 3.5321585374037927E-4
+        "1593576000000": 3.5321585374037927E-4,
+        "1596254400000": 0.001093549515922081
     },
     "installationsPerVersion": {
-        "0.1-alpha-1-SNAPSHOT (private)": 1
+        "1.0-rc-3": 2,
+        "1.0-rc-4-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "0.1-alpha-1-SNAPSHOT (private)": 3.5321585374037927E-4
+        "1.0-rc-3": 7.290330106147206E-4,
+        "1.0-rc-4-SNAPSHOT (private)": 3.645165053073603E-4
     }
 }

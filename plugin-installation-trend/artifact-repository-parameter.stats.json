@@ -1,17 +1,19 @@
 {
     "name": "artifact-repository-parameter",
     "installations": {
-        "1601524800000": 9
+        "1601524800000": 9,
+        "1604203200000": 24
     },
     "installationsPercentage": {
-        "1601524800000": 0.003260987716946266
+        "1601524800000": 0.003260987716946266,
+        "1604203200000": 0.008645969177119883
     },
     "installationsPerVersion": {
-        "1.0.0": 8,
-        "1.0.0-SNAPSHOT (private)": 1
+        "1.0.0": 23,
+        "1.1.0-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.0.0": 0.002898655748396681,
-        "1.0.0-SNAPSHOT (private)": 3.623319685495851E-4
+        "1.0.0": 0.008285720461406555,
+        "1.1.0-SNAPSHOT (private)": 3.6024871571332847E-4
     }
 }

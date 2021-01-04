@@ -1,17 +1,19 @@
 {
     "name": "kubesphere-token-auth",
     "installations": {
-        "1604203200000": 13
+        "1604203200000": 13,
+        "1606798800000": 21
     },
     "installationsPercentage": {
-        "1604203200000": 0.00468323330427327
+        "1604203200000": 0.00468323330427327,
+        "1606798800000": 0.007580652730298425
     },
     "installationsPerVersion": {
-        "1.3-SNAPSHOT (private)": 5,
-        "1.7": 8
+        "1.3-SNAPSHOT (private)": 8,
+        "1.7": 13
     },
     "installationsPercentagePerVersion": {
-        "1.3-SNAPSHOT (private)": 0.0018012435785666424,
-        "1.7": 0.0028819897257066278
+        "1.3-SNAPSHOT (private)": 0.0028878677067803523,
+        "1.7": 0.004692785023518073
     }
 }

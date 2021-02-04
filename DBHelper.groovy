@@ -1,9 +1,11 @@
+import groovy.sql.Sql
 import org.sqlite.*
+import org.sqlite.SQLiteConfig
 import java.sql.*
 
 class DBHelper {
 
-    def static setupDB(workingDir){
+    static Sql setupDB(workingDir){
 
         def dbFile = new File(workingDir, "stats.db")
 
@@ -13,7 +15,15 @@ class DBHelper {
         // db = groovy.sql.Sql.newInstance("jdbc:sqlite::memory:","org.sqlite.JDBC")
 
         // persistent
-        def db = groovy.sql.Sql.newInstance("jdbc:sqlite:"+dbFile.absolutePath,"org.sqlite.JDBC")
+        SQLiteConfig config = new SQLiteConfig()
+        config.setCacheSize(4000000)
+        config.setSynchronous(SQLiteConfig.SynchronousMode.OFF)
+        config.setLockingMode(SQLiteConfig.LockingMode.EXCLUSIVE)
+        config.setJournalMode(SQLiteConfig.JournalMode.OFF)
+        config.setTempStore(SQLiteConfig.TempStore.MEMORY)
+
+        def db = new Sql(config.createConnection("jdbc:sqlite:"+dbFile.absolutePath))
+        db.setCacheStatements(true)
 
         if(!dbExists){
             // define the tables

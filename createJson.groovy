@@ -1,5 +1,5 @@
 @GrabConfig(systemClassLoader=true)
-@Grab('org.xerial:sqlite-jdbc:3.16.1')
+@Grab('org.xerial:sqlite-jdbc:3.34.0')
 import org.sqlite.*
 import java.sql.*
 import java.util.zip.GZIPInputStream;

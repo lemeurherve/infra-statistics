@@ -21,8 +21,8 @@ class NumberCollector {
     Map<String,BigDecimal> timeByYear = [:]
     Map<String,Integer> recordsByYear = [:]
 
-    def NumberCollector(File workingDir, Sql db){
-        this.db = db
+    def NumberCollector(File workingDir){
+        this.db = DBHelper.setupDB(workingDir)
         this.workingDir = workingDir
     }
 
@@ -83,7 +83,7 @@ class NumberCollector {
 
                 data.executors << [instId, metric.totalExecutors]
 
-                if (data.jenkins.size() > 10000) {
+                if (data.jenkins.size() > 50000) {
                     insCnt += batchInsert(queries, data, monthDate)
                     data = [
                         jenkins: new ArrayList<List>(),
@@ -105,13 +105,14 @@ class NumberCollector {
         if (dateStr.endsWith("12")) {
             println "\nFOR YEAR ${year} WITH ${String.format("%,d", recordsByYear.get(year))} INSERTS TOTAL WAS ${timeByYear.get(year)}"
         }
+        p = null
     }
 
     int batchInsert(Map<String,String> queries, Map<String,List<List>> data, monthDate) {
         def insCnt = 0
         queries.each { qType, qVal ->
             if (data[qType].size() > 0) {
-                db.withBatch(10000, qVal) { ps ->
+                db.withBatch(15000, qVal) { ps ->
                     data[qType].each { d ->
                         insCnt++
                         d.add(0, monthDate)
@@ -133,8 +134,8 @@ class NumberCollector {
 }
 
 def workingDir = new File("target")
-Sql db = DBHelper.setupDB(workingDir)
-new NumberCollector(workingDir, db).run(args)
+//Sql db = DBHelper.setupDB(workingDir)
+new NumberCollector(workingDir).run(args)
 
 
 

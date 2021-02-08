@@ -4,12 +4,13 @@ import org.sqlite.SQLiteConfig
 import java.sql.*
 
 class DBHelper {
+    static boolean dbExists
 
-    static Sql setupDB(workingDir){
+    static Sql setupDB(File workingDir){
 
-        def dbFile = new File(workingDir, "stats.db")
+        def dbFile = new File(new File(workingDir, "statsdb"), "stats.db")
 
-        boolean dbExists = dbFile.exists()
+        dbExists = dbFile.exists()
 
         // in memory
         // db = groovy.sql.Sql.newInstance("jdbc:sqlite::memory:","org.sqlite.JDBC")

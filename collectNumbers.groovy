@@ -45,72 +45,82 @@ class NumberCollector {
         JenkinsMetricParser p = new JenkinsMetricParser()
 
         def queries = [
-            jenkins: [
-                query: "insert into jenkins(instanceid, month, version, jvmvendor, jvmname, jvmversion) values( ?, ?, ?, ?, ?, ?)",
-                data: [],
-            ],
-            plugins: [
-                query: "insert into plugin(instanceid, month, name, version) values( ?, ?, ?, ?)",
-                data: [],
-            ],
-            jobTypes: [
-                query: "insert into job(instanceid, month, type, jobnumber) values(?, ?, ?, ?)",
-                data: [],
-            ],
-            nodesOnOs: [
-                query: "insert into node(instanceid, month, osname, nodenumber) values(?, ?, ?, ?)",
-                data: [],
-            ],
-            executors: [
-                query: "insert into executor(instanceid, month, numberofexecutors) values(?, ?, ?)",
-                data: [],
-            ]
+            jenkins: "insert into jenkins(month, instanceid, version, jvmvendor, jvmname, jvmversion) values(?, ?, ?, ?, ?, ?)",
+            plugins: "insert into plugin(month, instanceid, name, version) values(?, ?, ?, ?)",
+            jobTypes: "insert into job(month, instanceid, type, jobnumber) values(?, ?, ?, ?)",
+            nodesOnOs: "insert into node(month, instanceid, osname, nodenumber) values(?, ?, ?, ?)",
+            executors: "insert into executor(month, instanceid, numberofexecutors) values(?, ?, ?)",
         ]
 
-        p.forEachInstance(file) { InstanceMetric metric ->
-            if ((records++)%1000==0)
-                System.out.print('.');
-            def instId = metric.instanceId;
-
-            queries['jenkins']['data'] << [instId, "${monthDate}", "${metric.jenkinsVersion}", "${metric.jvm?.vendor}", "${metric.jvm?.name}", "${metric.jvm?.version}"]
-
-            metric.plugins.each { pluginName, pluginVersion ->
-                queries['plugins']['data'] << [instId, "${monthDate}", pluginName, pluginVersion]
-            }
-
-            metric.jobTypes.each { jobtype, jobNumber ->
-                queries['jobTypes']['data'] << [instId, "${monthDate}", jobtype, jobNumber]
-            }
-
-            metric.nodesOnOs.each { os, nodesNumber ->
-                queries['nodesOnOs']['data'] << [instId, "${monthDate}", os, nodesNumber]
-            }
-
-            queries['executors']['data'] << [instId, "${monthDate}", metric.totalExecutors]
-        }
-
+        def data = [
+            jenkins: new ArrayList<List>(),
+            plugins: new ArrayList<List>(),
+            jobTypes: new ArrayList<List>(),
+            nodesOnOs: new ArrayList<List>(),
+            executors: new ArrayList<List>()
+        ]
         def insCnt = 0
 
-        db.withTransaction({
+        db.withTransaction {
+            p.forEachInstance(file) { InstanceMetric metric ->
+                if ((records++) % 1000 == 0)
+                    System.out.print('.');
+                def instId = metric.instanceId;
 
-            queries.each { qType, qVal ->
-                db.withBatch(25000, qVal['query']) { ps ->
-                    qVal['data'].each { d ->
-                        insCnt++
-                        ps.addBatch(d)
-                    }
+                data.jenkins << [instId, "${metric.jenkinsVersion}", "${metric.jvm?.vendor}", "${metric.jvm?.name}", "${metric.jvm?.version}"]
+
+                metric.plugins.each { pluginName, pluginVersion ->
+                    data.plugins << [instId, pluginName, pluginVersion]
+                }
+
+                metric.jobTypes.each { jobtype, jobNumber ->
+                    data.jobTypes << [instId, jobtype, jobNumber]
+                }
+
+                metric.nodesOnOs.each { os, nodesNumber ->
+                    data.nodesOnOs << [instId, os, nodesNumber]
+                }
+
+                data.executors << [instId, metric.totalExecutors]
+
+                if (data.jenkins.size() > 10000) {
+                    insCnt += batchInsert(queries, data, monthDate)
+                    data = [
+                        jenkins: new ArrayList<List>(),
+                        plugins: new ArrayList<List>(),
+                        jobTypes: new ArrayList<List>(),
+                        nodesOnOs: new ArrayList<List>(),
+                        executors: new ArrayList<List>()
+                    ]
                 }
             }
+            insCnt += batchInsert(queries, data, monthDate)
             db.execute("insert into importedfile(name) values(${file.name})")
-        })
+        }
 
         def commitTm = (new Date().getTime() - start.getTime()) / 1000
         timeByYear.put(year, timeByYear.get(year) + commitTm)
         recordsByYear.put(year, recordsByYear.get(year) + insCnt)
         println "\ncommitted ${records} records for ${monthDate.format('yyyy-MM')} in ${commitTm}"
         if (dateStr.endsWith("12")) {
-            println "\nFOR YEAR ${year} WITH ${recordsByYear.get(year)} RECORDS TOTAL WAS ${timeByYear.get(year)}"
+            println "\nFOR YEAR ${year} WITH ${String.format("%,d", recordsByYear.get(year))} INSERTS TOTAL WAS ${timeByYear.get(year)}"
         }
+    }
+
+    int batchInsert(Map<String,String> queries, Map<String,List<List>> data, monthDate) {
+        def insCnt = 0
+        queries.each { qType, qVal ->
+            if (data[qType].size() > 0) {
+                db.withBatch(10000, qVal) { ps ->
+                    data[qType].each { d ->
+                        insCnt++
+                        d.add(0, monthDate)
+                        ps.addBatch(d)
+                    }
+                }
+            }
+        }
+        return insCnt
     }
 
     def run(String[] args) {

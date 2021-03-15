@@ -2,18 +2,26 @@
     "name": "carbonetes-serverless-container-scanning-and-policy-compliance",
     "installations": {
         "1606798800000": 8,
-        "1609477200000": 7
+        "1609477200000": 7,
+        "1612155600000": 6
     },
     "installationsPercentage": {
         "1606798800000": 0.0028878677067803523,
-        "1609477200000": 0.002500500100020004
+        "1609477200000": 0.002500500100020004,
+        "1612155600000": 0.0021800582802246915
     },
     "installationsPerVersion": {
         "1.0-SNAPSHOT (private)": 1,
-        "1.2": 6
+        "1.2": 1,
+        "1.4": 1,
+        "1.5": 2,
+        "1.5-SNAPSHOT (private)": 1
     },
     "installationsPercentagePerVersion": {
-        "1.0-SNAPSHOT (private)": 3.572143000028577E-4,
-        "1.2": 0.0021432858000171463
+        "1.0-SNAPSHOT (private)": 3.633430467041152E-4,
+        "1.2": 3.633430467041152E-4,
+        "1.4": 3.633430467041152E-4,
+        "1.5": 7.266860934082304E-4,
+        "1.5-SNAPSHOT (private)": 3.633430467041152E-4
     }
 }

@@ -1,109 +1,17 @@
 <html>
     <head>
         <title>Plugin and Core Version Matrix for the iphoneview Plugin</title>
-        <style type="text/css">
-body, table {
-    font-family: monospace;
-}
-table {
-    border-collapse: collapse;
-    border: 1px solid #FF0000;
-}
-
-table td, table th {
-    border: 1px solid #FF0000;
-    text-align: center;
-    padding: 3px;
-}
-tr.lts {
-    background-color: #eef;
-}
-td.subtotal {
-    background-color: #ccc;
-}
-        </style>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="pluginversions.css" />
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src="pluginversions.js"></script>
         <script type="text/javascript">
 $(document).ready(function() {
+    var versionData = {"0.2":{"1.373":1,"1.374":3,"1.377":2,"1.380":1,"1.381":3,"1.383":1,"1.384":2,"1.386":2,"1.387":1,"1.388":1,"1.389":2,"1.392":2,"1.393":3,"1.394":1,"1.395":7,"1.395.1":6,"1.396":2,"1.400":1,"1.401":1,"1.403":1,"1.404":1,"1.405":2,"1.408":1,"1.409.2":1,"1.409.3":1,"1.412":1,"1.413":1,"1.414":1,"1.415":2,"1.418":2,"1.419":1,"1.420":1,"1.421":1,"1.423":2,"1.424":2,"1.424.6":5,"1.425":1,"1.426":2,"1.427":4,"1.428":2,"1.430":1,"1.431":3,"1.432":6,"1.433":1,"1.434":2,"1.435":2,"1.436":3,"1.438":1,"1.440":3,"1.441":5,"1.443":1,"1.444":3,"1.445":1,"1.446":1,"1.447":3,"1.447.1":6,"1.447.2":2,"1.448":2,"1.449":2,"1.450":3,"1.451":5,"1.452":1,"1.454":1,"1.455":3,"1.456":2,"1.457":3,"1.458":4,"1.459":2,"1.460":3,"1.461":2,"1.462":5,"1.463":4,"1.464":5,"1.465":2,"1.466":3,"1.466.1":4,"1.466.2":9,"1.467":2,"1.468":2,"1.470":6,"1.471":2,"1.472":5,"1.473":4,"1.474":13,"1.475":13,"1.476":4,"1.477":8,"1.478":6,"1.479":4,"1.480":5,"1.480.1":5,"1.480.2":7,"1.480.3":17,"1.481":4,"1.482":2,"1.483":5,"1.484":9,"1.485":1,"1.486":7,"1.487":2,"1.488":5,"1.489":5,"1.490":3,"1.491":3,"1.492":29,"1.493":11,"1.494":12,"1.496":10,"1.497":3,"1.498":13,"1.499":35,"1.500":28,"1.501":13,"1.502":17,"1.503":9,"1.504":15,"1.505":27,"1.506":23,"1.507":5,"1.508":18,"1.509":18,"1.509.1":12,"1.510":31,"1.511":28,"1.512":43,"1.513":23,"1.514":133,"1.515":86,"1.516":58},"0.1":{"1.372":1,"1.395.1":1}};
 
-    var versionData = {"0.2":{"1.368":7,"1.369":20,"1.370":4,"1.371":17,"1.372":29,"1.373":31,"1.374":60,"1.375":43,"1.376":90,"1.377":84,"1.378":92},"0.1":{"1.372":1}};
-
-    var pluginVersionsSet = new Set();
-
-    var coreVersionsSet = new Set();
-
-    var totalInstallsPerPluginVersion = new Map();
-
-    var totalInstalls = 0
-
-    for (var pluginVersion in versionData) {
-        if (/^\d[\d.]*\d$/.test(pluginVersion)) {
-            pluginVersionsSet.add(pluginVersion);
-            if (!totalInstallsPerPluginVersion.has(pluginVersion)) {
-                totalInstallsPerPluginVersion[pluginVersion] = 0;
-            }
-            for (var coreVersion in versionData[pluginVersion]) {
-                if (/^[12][.]\d+(|[.]\d)$/.test(coreVersion)) {
-                    coreVersionsSet.add(coreVersion);
-                    totalInstalls += versionData[pluginVersion][coreVersion];
-                    totalInstallsPerPluginVersion[pluginVersion] += versionData[pluginVersion][coreVersion];
-                }
-            }
-        }
-    }
-
-    var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
-
-    var pluginVersions = Array.from(pluginVersionsSet);
-    pluginVersions.sort(collator.compare);
-
-    var coreVersions = Array.from(coreVersionsSet);
-    coreVersions.sort(collator.compare);
-
-    var thisCoreVersionOrOlderPerPluginVersion = {};
-
-    // header row
-    var row = $("<tr>");
-    row.append($("<th>").html("iphoneview - " + totalInstalls));
-    for (let pluginVersion of pluginVersions) {
-        row.append($("<th>").html(pluginVersion));
-        thisCoreVersionOrOlderPerPluginVersion[pluginVersion] = 0;
-    }
-    row.append($("<th>").html("Sum"));
-    row.appendTo('#versionsContainer');
-
-
-    var thisCoreVersionOrOlder = 0
-
-    // value rows
-    for (let coreVersion of coreVersions) {
-        var row = $("<tr>");
-        if (/^\d[.]\d+[.]\d$/.test(coreVersion)) {
-            row.addClass('lts');
-        }
-        row.append($("<th>").html(coreVersion));
-        var thisCoreVersion = 0;
-        for (let pluginVersion of pluginVersions) {
-            var cnt = versionData[pluginVersion][coreVersion];
-            if (cnt == null) {
-                cnt = 0;
-            }
-            thisCoreVersion += cnt;
-            var title = pluginVersion + " on " + coreVersion + ": " + cnt + " installs (" + Math.round(cnt/totalInstalls*100) + "%)";
-            title += " - " + Math.round((1-thisCoreVersionOrOlderPerPluginVersion[pluginVersion]/totalInstallsPerPluginVersion[pluginVersion])*100) + "% of " + pluginVersion + " installs are on this core version or newer";
-            row.append($("<td>").attr("title", title).css("opacity", Math.max(0.1, cnt*100/totalInstalls)).html(cnt));
-
-            thisCoreVersionOrOlderPerPluginVersion[pluginVersion] += cnt;
-        }
-
-        var title = coreVersion + " total: " + thisCoreVersion + " installs (" + Math.round(thisCoreVersion/totalInstalls*100) + "%)";
-        title += " - " + Math.round((1-thisCoreVersionOrOlder/totalInstalls)*100) + "% of plugin installs are on this core version or newer";
-        row.append($("<td>").addClass("subtotal").attr("title", title).html(thisCoreVersion));
-
-        thisCoreVersionOrOlder += thisCoreVersion;
-
-        row.appendTo('#versionsContainer');
-    }
+    parseData(versionData, "iphoneview");
 });
         </script>
     </head>

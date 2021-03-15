@@ -1,109 +1,17 @@
 <html>
     <head>
         <title>Plugin and Core Version Matrix for the ruby Plugin</title>
-        <style type="text/css">
-body, table {
-    font-family: monospace;
-}
-table {
-    border-collapse: collapse;
-    border: 1px solid #FF0000;
-}
-
-table td, table th {
-    border: 1px solid #FF0000;
-    text-align: center;
-    padding: 3px;
-}
-tr.lts {
-    background-color: #eef;
-}
-td.subtotal {
-    background-color: #ccc;
-}
-        </style>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="pluginversions.css" />
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src="pluginversions.js"></script>
         <script type="text/javascript">
 $(document).ready(function() {
+    var versionData = {"1.2":{"1.372":1,"1.373":1,"1.377":1,"1.379":1,"1.384":1,"1.386":2,"1.392":2,"1.392.LI10":1,"1.392.LI22":1,"1.393":4,"1.395":7,"1.395.1":8,"1.399":1,"1.400":1,"1.401":1,"1.409.1":1,"1.409.3":1,"1.410":1,"1.411":1,"1.414":1,"1.415":1,"1.418":2,"1.419":1,"1.420":1,"1.421":2,"1.424":3,"1.424.6":12,"1.425":3,"1.426":2,"1.427":1,"1.429":1,"1.430":1,"1.432":4,"1.433":3,"1.434":2,"1.435":3,"1.436":3,"1.437":1,"1.438":5,"1.439":2,"1.440":3,"1.441":1,"1.442":2,"1.443":2,"1.444":5,"1.446":2,"1.447":6,"1.447.1":5,"1.447.2":2,"1.448":1,"1.449":2,"1.450":6,"1.451":8,"1.452":3,"1.454":2,"1.455":4,"1.456":3,"1.457":5,"1.458":3,"1.459":4,"1.460":7,"1.461":6,"1.462":10,"1.463":2,"1.464":8,"1.465":5,"1.466":12,"1.466.1":3,"1.466.2":9,"1.467":5,"1.469":2,"1.470":4,"1.471":4,"1.472":11,"1.473":9,"1.474":16,"1.475":17,"1.476":3,"1.477":13,"1.478":13,"1.479":6,"1.480":15,"1.480.1":8,"1.480.2":6,"1.480.3":33,"1.481":5,"1.482":15,"1.483":9,"1.484":23,"1.485":5,"1.486":20,"1.487":5,"1.488":16,"1.489":14,"1.490":14,"1.491":11,"1.492":28,"1.493":18,"1.494":11,"1.495":6,"1.496":10,"1.497":3,"1.498":11,"1.499":37,"1.500":49,"1.501":18,"1.502":44,"1.503":22,"1.504":33,"1.505":35,"1.506":62,"1.507":4,"1.508":44,"1.509":40,"1.509.1":28,"1.510":48,"1.511":59,"1.512":66,"1.513":47,"1.514":247,"1.515":170,"1.516":100},"1.1":{"1.372":1,"1.376":1,"1.389":1,"1.419":1,"1.466.2":1,"1.484":1}};
 
-    var versionData = {"1.2":{"1.300":1},"1.1":{"1.264":1,"1.265":1,"1.266":1,"1.270":1,"1.274":2,"1.276":4,"1.277":3,"1.278":4,"1.282":5,"1.283":3,"1.284":2,"1.285":7,"1.286":3,"1.288":1,"1.289":1,"1.290":7,"1.291":4,"1.292":6,"1.293":11,"1.294":3,"1.295":14,"1.296":11,"1.297":17,"1.299":18,"1.300":38,"1.301":29}};
-
-    var pluginVersionsSet = new Set();
-
-    var coreVersionsSet = new Set();
-
-    var totalInstallsPerPluginVersion = new Map();
-
-    var totalInstalls = 0
-
-    for (var pluginVersion in versionData) {
-        if (/^\d[\d.]*\d$/.test(pluginVersion)) {
-            pluginVersionsSet.add(pluginVersion);
-            if (!totalInstallsPerPluginVersion.has(pluginVersion)) {
-                totalInstallsPerPluginVersion[pluginVersion] = 0;
-            }
-            for (var coreVersion in versionData[pluginVersion]) {
-                if (/^[12][.]\d+(|[.]\d)$/.test(coreVersion)) {
-                    coreVersionsSet.add(coreVersion);
-                    totalInstalls += versionData[pluginVersion][coreVersion];
-                    totalInstallsPerPluginVersion[pluginVersion] += versionData[pluginVersion][coreVersion];
-                }
-            }
-        }
-    }
-
-    var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
-
-    var pluginVersions = Array.from(pluginVersionsSet);
-    pluginVersions.sort(collator.compare);
-
-    var coreVersions = Array.from(coreVersionsSet);
-    coreVersions.sort(collator.compare);
-
-    var thisCoreVersionOrOlderPerPluginVersion = {};
-
-    // header row
-    var row = $("<tr>");
-    row.append($("<th>").html("ruby - " + totalInstalls));
-    for (let pluginVersion of pluginVersions) {
-        row.append($("<th>").html(pluginVersion));
-        thisCoreVersionOrOlderPerPluginVersion[pluginVersion] = 0;
-    }
-    row.append($("<th>").html("Sum"));
-    row.appendTo('#versionsContainer');
-
-
-    var thisCoreVersionOrOlder = 0
-
-    // value rows
-    for (let coreVersion of coreVersions) {
-        var row = $("<tr>");
-        if (/^\d[.]\d+[.]\d$/.test(coreVersion)) {
-            row.addClass('lts');
-        }
-        row.append($("<th>").html(coreVersion));
-        var thisCoreVersion = 0;
-        for (let pluginVersion of pluginVersions) {
-            var cnt = versionData[pluginVersion][coreVersion];
-            if (cnt == null) {
-                cnt = 0;
-            }
-            thisCoreVersion += cnt;
-            var title = pluginVersion + " on " + coreVersion + ": " + cnt + " installs (" + Math.round(cnt/totalInstalls*100) + "%)";
-            title += " - " + Math.round((1-thisCoreVersionOrOlderPerPluginVersion[pluginVersion]/totalInstallsPerPluginVersion[pluginVersion])*100) + "% of " + pluginVersion + " installs are on this core version or newer";
-            row.append($("<td>").attr("title", title).css("opacity", Math.max(0.1, cnt*100/totalInstalls)).html(cnt));
-
-            thisCoreVersionOrOlderPerPluginVersion[pluginVersion] += cnt;
-        }
-
-        var title = coreVersion + " total: " + thisCoreVersion + " installs (" + Math.round(thisCoreVersion/totalInstalls*100) + "%)";
-        title += " - " + Math.round((1-thisCoreVersionOrOlder/totalInstalls)*100) + "% of plugin installs are on this core version or newer";
-        row.append($("<td>").addClass("subtotal").attr("title", title).html(thisCoreVersion));
-
-        thisCoreVersionOrOlder += thisCoreVersion;
-
-        row.appendTo('#versionsContainer');
-    }
+    parseData(versionData, "ruby");
 });
         </script>
     </head>

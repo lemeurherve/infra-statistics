@@ -2,30 +2,22 @@
     "name": "opentelemetry",
     "installations": {
         "1612155600000": 2,
-        "1614574800000": 15
+        "1614574800000": 15,
+        "1617249600000": 16
     },
     "installationsPercentage": {
         "1612155600000": 7.266860934082304E-4,
-        "1614574800000": 0.00495808763254621
+        "1614574800000": 0.00495808763254621,
+        "1617249600000": 0.005413617277559541
     },
     "installationsPerVersion": {
-        "0.2-alpha": 3,
-        "0.3-alpha-SNAPSHOT (private)": 3,
-        "0.5-beta": 3,
-        "0.6-beta-SNAPSHOT (private)": 2,
-        "0.7-beta": 1,
-        "0.7-beta-SNAPSHOT (private)": 1,
-        "0.8-beta": 1,
-        "0.9-beta-SNAPSHOT (private)": 1
+        "0.10-SNAPSHOT (private)": 3,
+        "0.5-beta": 1,
+        "0.9": 12
     },
     "installationsPercentagePerVersion": {
-        "0.2-alpha": 9.916175265092418E-4,
-        "0.3-alpha-SNAPSHOT (private)": 9.916175265092418E-4,
-        "0.5-beta": 9.916175265092418E-4,
-        "0.6-beta-SNAPSHOT (private)": 6.610783510061613E-4,
-        "0.7-beta": 3.3053917550308063E-4,
-        "0.7-beta-SNAPSHOT (private)": 3.3053917550308063E-4,
-        "0.8-beta": 3.3053917550308063E-4,
-        "0.9-beta-SNAPSHOT (private)": 3.3053917550308063E-4
+        "0.10-SNAPSHOT (private)": 0.001015053239542414,
+        "0.5-beta": 3.383510798474713E-4,
+        "0.9": 0.004060212958169656
     }
 }

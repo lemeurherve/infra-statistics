@@ -1,17 +1,21 @@
 {
     "name": "oracle-cloud-infrastructure-devops",
     "installations": {
-        "1627790400000": 23
+        "1627790400000": 23,
+        "1630468800000": 35
     },
     "installationsPercentage": {
-        "1627790400000": 0.007836136171604568
+        "1627790400000": 0.007836136171604568,
+        "1630468800000": 0.011844331641285956
     },
     "installationsPerVersion": {
-        "1.0-SNAPSHOT (private)": 2,
-        "1.0.0": 21
+        "1.0-SNAPSHOT (private)": 1,
+        "1.0.0": 24,
+        "1.0.1": 10
     },
     "installationsPercentagePerVersion": {
-        "1.0-SNAPSHOT (private)": 6.81403145356919E-4,
-        "1.0.0": 0.007154733026247649
+        "1.0-SNAPSHOT (private)": 3.3840947546531303E-4,
+        "1.0.0": 0.008121827411167513,
+        "1.0.1": 0.00338409475465313
     }
 }

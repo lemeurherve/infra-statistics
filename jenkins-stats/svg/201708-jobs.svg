@@ -1,85 +1,69 @@
-<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='xMidYMid meet' viewBox='0 0 665 10733.884'>
-  <rect fill='blue' height='0' stroke='black' width='12' x='15' y='10433.884' />
-  <text x='15' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 15,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jvnet-hudson-test-SecuredMockFolder (0)</text>
-  <rect fill='blue' height='0' stroke='black' width='12' x='30' y='10433.884' />
-  <text x='30' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 30,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-plugins-jprt-JPRTJob (0)</text>
-  <rect fill='blue' height='0' stroke='black' width='12' x='45' y='10433.884' />
-  <text x='45' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 45,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-item_forwarding-ForwardingItem (0)</text>
-  <rect fill='blue' height='0' stroke='black' width='12' x='60' y='10433.884' />
-  <text x='60' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 60,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-plugins-wormpex-data-template-DataWarehouseStyleProject (0)</text>
-  <rect fill='blue' height='0' stroke='black' width='12' x='75' y='10433.884' />
-  <text x='75' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 75,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-plugins-wormpex-data-template-DependencyStyleProject (0)</text>
-  <rect fill='blue' height='0' stroke='black' width='12' x='90' y='10433.884' />
-  <text x='90' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 90,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-plugins-wormpex-data-template-EmailStyleProject (0)</text>
-  <rect fill='blue' height='0' stroke='black' width='12' x='105' y='10433.884' />
-  <text x='105' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 105,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-performance_receiver-PerformanceProject (0)</text>
-  <rect fill='blue' height='0' stroke='black' width='12' x='120' y='10433.884' />
-  <text x='120' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 120,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-model-PhpProject (0)</text>
-  <rect fill='blue' height='0.001' stroke='black' width='12' x='135' y='10433.883' />
-  <text x='135' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 135,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-SyncSources-MonitoringJobsProject (1)</text>
-  <rect fill='blue' height='0.001' stroke='black' width='12' x='150' y='10433.883' />
-  <text x='150' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 150,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-SyncSources-PreparationDailyProject (1)</text>
-  <rect fill='blue' height='0.001' stroke='black' width='12' x='165' y='10433.883' />
-  <text x='165' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 165,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-pipeline-multibranch-external-PipelineMultiBranchExternalProject (1)</text>
-  <rect fill='blue' height='0.001' stroke='black' width='12' x='180' y='10433.883' />
-  <text x='180' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 180,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-jobexecutors-toplevelitems-StoreVersion (1)</text>
-  <rect fill='blue' height='0.002' stroke='black' width='12' x='195' y='10433.882' />
-  <text x='195' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 195,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-workflow-multibranch-PropertyDrivenWorkflowMultiBranchProject (2)</text>
-  <rect fill='blue' height='0.002' stroke='black' width='12' x='210' y='10433.882' />
-  <text x='210' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 210,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-plugin-smartjob-SmartJob (2)</text>
-  <rect fill='blue' height='0.003' stroke='black' width='12' x='225' y='10433.881' />
-  <text x='225' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 225,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-jobexecutors-toplevelitems-PortalNotifier (3)</text>
-  <rect fill='blue' height='0.004' stroke='black' width='12' x='240' y='10433.880' />
-  <text x='240' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 240,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-engitsharedagent-EngITSharedSlave (4)</text>
-  <rect fill='blue' height='0.004' stroke='black' width='12' x='255' y='10433.880' />
-  <text x='255' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 255,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-coordinator-dummy-model-CoordinatorProject (4)</text>
-  <rect fill='blue' height='0.006' stroke='black' width='12' x='270' y='10433.878' />
-  <text x='270' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 270,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-model-HtmlProject (6)</text>
-  <rect fill='blue' height='0.007' stroke='black' width='12' x='285' y='10433.877' />
-  <text x='285' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 285,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-model-CppProject (7)</text>
-  <rect fill='blue' height='0.01' stroke='black' width='12' x='300' y='10433.874' />
-  <text x='300' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 300,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jvnet-hudson-test-MockFolder (10)</text>
-  <rect fill='blue' height='0.012' stroke='black' width='12' x='315' y='10433.872' />
-  <text x='315' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 315,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-pluginintegrationnew-LcaToolProject (12)</text>
-  <rect fill='blue' height='0.016' stroke='black' width='12' x='330' y='10433.868' />
-  <text x='330' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 330,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-drools-DroolsProject (16)</text>
-  <rect fill='blue' height='0.017' stroke='black' width='12' x='345' y='10433.867' />
-  <text x='345' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 345,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-drupal-projects-DrupalProject (17)</text>
-  <rect fill='blue' height='0.018' stroke='black' width='12' x='360' y='10433.866' />
-  <text x='360' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 360,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-SyncSources-MakeProject (18)</text>
-  <rect fill='blue' height='0.019' stroke='black' width='12' x='375' y='10433.865' />
-  <text x='375' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 375,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-SyncSources-MakeFirProject (19)</text>
-  <rect fill='blue' height='0.019' stroke='black' width='12' x='390' y='10433.865' />
-  <text x='390' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 390,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-SyncSources-PreShelveProject (19)</text>
-  <rect fill='blue' height='0.022' stroke='black' width='12' x='405' y='10433.862' />
-  <text x='405' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 405,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-model-GolangProject (22)</text>
-  <rect fill='blue' height='0.157' stroke='black' width='12' x='420' y='10433.727' />
-  <text x='420' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 420,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-spoontrigger-SpoonProject (157)</text>
-  <rect fill='blue' height='0.157' stroke='black' width='12' x='435' y='10433.727' />
-  <text x='435' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 435,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-plugins-job_dependency-projects-MasterProject (157)</text>
-  <rect fill='blue' height='0.372' stroke='black' width='12' x='450' y='10433.512' />
-  <text x='450' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 450,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-model-RunOnceProject (372)</text>
-  <rect fill='blue' height='0.407' stroke='black' width='12' x='465' y='10433.477' />
-  <text x='465' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 465,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-coordinator-model-CoordinatorProject (407)</text>
-  <rect fill='blue' height='0.672' stroke='black' width='12' x='480' y='10433.212' />
-  <text x='480' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 480,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-pipeline-multibranch-defaults-PipelineMultiBranchDefaultsProject (672)</text>
-  <rect fill='blue' height='3.087' stroke='black' width='12' x='495' y='10430.797' />
-  <text x='495' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 495,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-jobgenerator-JobGenerator (3087)</text>
-  <rect fill='blue' height='4.76' stroke='black' width='12' x='510' y='10429.124' />
-  <text x='510' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 510,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-model-ExternalJob (4760)</text>
-  <rect fill='blue' height='6.692' stroke='black' width='12' x='525' y='10427.192' />
-  <text x='525' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 525,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-ivy-IvyModuleSet (6692)</text>
-  <rect fill='blue' height='19.915' stroke='black' width='12' x='540' y='10413.969' />
-  <text x='540' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 540,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-plugins-project_inheritance-projects-InheritanceProject (19915)</text>
-  <rect fill='blue' height='125.785' stroke='black' width='12' x='555' y='10308.099' />
-  <text x='555' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 555,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-workflow-multibranch-WorkflowMultiBranchProject (125785)</text>
-  <rect fill='blue' height='370.845' stroke='black' width='12' x='570' y='10063.039' />
-  <text x='570' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 570,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-matrix-MatrixProject (370845)</text>
-  <rect fill='blue' height='1167.18' stroke='black' width='12' x='585' y='9266.704' />
-  <text x='585' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 585,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>org-jenkinsci-plugins-workflow-job-WorkflowJob (1167180)</text>
-  <rect fill='blue' height='1561.967' stroke='black' width='12' x='600' y='8871.917' />
-  <text x='600' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 600,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-maven-MavenModuleSet (1561967)</text>
-  <rect fill='blue' height='10383.884' stroke='black' width='12' x='615' y='50.000' />
-  <text x='615' y='10438.884' font-family='Tahoma' font-size='12' transform='rotate(90 615,10438.884)' text-rendering='optimizeSpeed' fill='#000000;'>hudson-model-FreeStyleProject (10383884)</text>
-  <text x='10' y='40' font-family='Tahoma' font-size='20' text-rendering='optimizeSpeed' fill='#000000;'>Jobs (total: 13646045)</text>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid meet" viewBox="0 0 545 10736.7">
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="15" y="10436.7"/>
+  <text x="15" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 15,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-SyncSources-MonitoringJobsProject (1)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="30" y="10436.7"/>
+  <text x="30" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 30,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-SyncSources-PreparationDailyProject (1)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="45" y="10436.7"/>
+  <text x="45" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 45,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-jobexecutors-toplevelitems-StoreVersion (1)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="60" y="10436.7"/>
+  <text x="60" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 60,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-pipeline-multibranch-external-PipelineMultiBranchExternalProject (1)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="75" y="10436.7"/>
+  <text x="75" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 75,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-plugin-smartjob-SmartJob (2)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="90" y="10436.7"/>
+  <text x="90" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 90,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-workflow-multibranch-PropertyDrivenWorkflowMultiBranchProject (2)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="105" y="10436.7"/>
+  <text x="105" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 105,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-jobexecutors-toplevelitems-PortalNotifier (3)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="120" y="10436.7"/>
+  <text x="120" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 120,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-coordinator-dummy-model-CoordinatorProject (4)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="135" y="10436.7"/>
+  <text x="135" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 135,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-engitsharedagent-EngITSharedSlave (4)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="150" y="10436.7"/>
+  <text x="150" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 150,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-model-HtmlProject (6)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="165" y="10436.7"/>
+  <text x="165" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 165,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-model-CppProject (7)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="180" y="10436.7"/>
+  <text x="180" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 180,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jvnet-hudson-test-MockFolder (10)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="195" y="10436.7"/>
+  <text x="195" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 195,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-pluginintegrationnew-LcaToolProject (12)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="210" y="10436.7"/>
+  <text x="210" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 210,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-drools-DroolsProject (16)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="225" y="10436.7"/>
+  <text x="225" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 225,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-drupal-projects-DrupalProject (17)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="240" y="10436.7"/>
+  <text x="240" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 240,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-SyncSources-MakeProject (18)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="255" y="10436.7"/>
+  <text x="255" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 255,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-SyncSources-MakeFirProject (19)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="270" y="10436.7"/>
+  <text x="270" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 270,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-SyncSources-PreShelveProject (19)</text>
+  <rect fill="blue" height="0.0" stroke="black" width="12" x="285" y="10436.7"/>
+  <text x="285" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 285,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-model-GolangProject (22)</text>
+  <rect fill="blue" height="0.2" stroke="black" width="12" x="300" y="10436.6"/>
+  <text x="300" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 300,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-plugins-job_dependency-projects-MasterProject (157)</text>
+  <rect fill="blue" height="0.2" stroke="black" width="12" x="315" y="10436.6"/>
+  <text x="315" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 315,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-spoontrigger-SpoonProject (157)</text>
+  <rect fill="blue" height="0.4" stroke="black" width="12" x="330" y="10436.3"/>
+  <text x="330" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 330,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-model-RunOnceProject (372)</text>
+  <rect fill="blue" height="0.4" stroke="black" width="12" x="345" y="10436.3"/>
+  <text x="345" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 345,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-coordinator-model-CoordinatorProject (407)</text>
+  <rect fill="blue" height="0.7" stroke="black" width="12" x="360" y="10436.0"/>
+  <text x="360" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 360,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-pipeline-multibranch-defaults-PipelineMultiBranchDefaultsProject (672)</text>
+  <rect fill="blue" height="3.1" stroke="black" width="12" x="375" y="10433.6"/>
+  <text x="375" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 375,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-jobgenerator-JobGenerator (3087)</text>
+  <rect fill="blue" height="4.8" stroke="black" width="12" x="390" y="10432.0"/>
+  <text x="390" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 390,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-model-ExternalJob (4763)</text>
+  <rect fill="blue" height="6.7" stroke="black" width="12" x="405" y="10430.0"/>
+  <text x="405" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 405,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-ivy-IvyModuleSet (6692)</text>
+  <rect fill="blue" height="19.9" stroke="black" width="12" x="420" y="10416.8"/>
+  <text x="420" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 420,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-plugins-project_inheritance-projects-InheritanceProject (19911)</text>
+  <rect fill="blue" height="125.8" stroke="black" width="12" x="435" y="10310.9"/>
+  <text x="435" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 435,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-workflow-multibranch-WorkflowMultiBranchProject (125777)</text>
+  <rect fill="blue" height="370.9" stroke="black" width="12" x="450" y="10065.9"/>
+  <text x="450" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 450,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-matrix-MatrixProject (370851)</text>
+  <rect fill="blue" height="1167.0" stroke="black" width="12" x="465" y="9269.7"/>
+  <text x="465" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 465,10441.7)" text-rendering="optimizeSpeed" fill="#000000">org-jenkinsci-plugins-workflow-job-WorkflowJob (1166975)</text>
+  <rect fill="blue" height="1562.1" stroke="black" width="12" x="480" y="8874.6"/>
+  <text x="480" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 480,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-maven-MavenModuleSet (1562109)</text>
+  <rect fill="blue" height="10386.7" stroke="black" width="12" x="495" y="50.0"/>
+  <text x="495" y="10441.7" font-family="Tahoma" font-size="12" transform="rotate(90 495,10441.7)" text-rendering="optimizeSpeed" fill="#000000">hudson-model-FreeStyleProject (10386718)</text>
+  <text x="10" y="40" font-family="Tahoma" font-size="20" text-rendering="optimizeSpeed" fill="#000000">Jobs (total: 13648813)</text>
 </svg>

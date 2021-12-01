@@ -1,15 +1,19 @@
 {
     "name": "hetzner-cloud",
     "installations": {
-        "1633060800000": 2
+        "1633046400000": 2,
+        "1635724800000": 6
     },
-    "installationsPercentage": {
-        "1633060800000": 6.904956723183738E-4
+    "installationsPercentages": {
+        "1633046400000": 0.00069074845,
+        "1635724800000": 0.0020412814
     },
     "installationsPerVersion": {
-        "20.v770f45be8c98": 2
+        "20.v770f45be8c98": 1,
+        "28.v8287336b49db": 5
     },
     "installationsPercentagePerVersion": {
-        "20.v770f45be8c98": 6.904956723183738E-4
+        "20.v770f45be8c98": 0.0003402136,
+        "28.v8287336b49db": 0.0017010679
     }
 }

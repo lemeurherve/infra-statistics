@@ -1,11 +1,17 @@
 {
     "name": "autonomiq",
     "installations": {
-        "1633046400000": 1
+        "1633046400000": 1,
+        "1638316800000": 1
     },
     "installationsPercentage": {
-        "1633046400000": 0.00034537422
+        "1633046400000": 0.00034537422,
+        "1638316800000": 0.00033865243
     },
-    "installationsPerVersion": {},
-    "installationsPercentagePerVersion": {}
+    "installationsPerVersion": {
+        "1.15": 1
+    },
+    "installationsPercentagePerVersion": {
+        "1.15": 0.00033865243
+    }
 }

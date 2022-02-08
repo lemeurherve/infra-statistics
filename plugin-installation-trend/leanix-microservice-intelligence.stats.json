@@ -2,12 +2,18 @@
     "name": "leanix-microservice-intelligence",
     "installations": {
         "1622505600000": 7,
-        "1630454400000": 1
+        "1630454400000": 1,
+        "1640995200000": 1
     },
     "installationsPercentage": {
         "1622505600000": 0.0023528305,
-        "1630454400000": 0.00033853663
+        "1630454400000": 0.00033853663,
+        "1640995200000": 0.00033961507
     },
-    "installationsPerVersion": {},
-    "installationsPercentagePerVersion": {}
+    "installationsPerVersion": {
+        "1.0.11-rc201.335c08161b66": 1
+    },
+    "installationsPercentagePerVersion": {
+        "1.0.11-rc201.335c08161b66": 0.00033961507
+    }
 }

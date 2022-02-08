@@ -1,15 +1,17 @@
 {
     "name": "zscaler-iac-scan",
     "installations": {
-        "1638316800000": 1
+        "1638316800000": 1,
+        "1640995200000": 7
     },
     "installationsPercentage": {
-        "1638316800000": 0.00033865243
+        "1638316800000": 0.00033865243,
+        "1640995200000": 0.0023773056
     },
     "installationsPerVersion": {
-        "0.0.1": 1
+        "0.0.1": 7
     },
     "installationsPercentagePerVersion": {
-        "0.0.1": 0.00033865243
+        "0.0.1": 0.0023773056
     }
 }

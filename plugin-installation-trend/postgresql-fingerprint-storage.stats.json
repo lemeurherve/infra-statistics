@@ -3,13 +3,19 @@
     "installations": {
         "1630454400000": 1,
         "1633046400000": 1,
-        "1635724800000": 1
+        "1635724800000": 1,
+        "1640995200000": 1
     },
     "installationsPercentage": {
         "1630454400000": 0.00033853663,
         "1633046400000": 0.00034537422,
-        "1635724800000": 0.0003402136
+        "1635724800000": 0.0003402136,
+        "1640995200000": 0.00033961507
     },
-    "installationsPerVersion": {},
-    "installationsPercentagePerVersion": {}
+    "installationsPerVersion": {
+        "0.1-alpha-1": 1
+    },
+    "installationsPercentagePerVersion": {
+        "0.1-alpha-1": 0.00033961507
+    }
 }

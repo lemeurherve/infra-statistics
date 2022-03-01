@@ -1,17 +1,19 @@
 {
     "name": "cloudbees-feature-management",
     "installations": {
-        "1640995200000": 3
+        "1640995200000": 3,
+        "1643673600000": 10
     },
     "installationsPercentage": {
-        "1640995200000": 0.0010188452
+        "1640995200000": 0.0010188452,
+        "1643673600000": 0.0034461962
     },
     "installationsPerVersion": {
-        "114.v37da_92570c1a_": 2,
-        "117.v5fc191981a_ed": 1
+        "117.v5fc191981a_ed": 5,
+        "119.v0b_84b_7a_d0f40": 5
     },
     "installationsPercentagePerVersion": {
-        "114.v37da_92570c1a_": 0.00067923014,
-        "117.v5fc191981a_ed": 0.00033961507
+        "117.v5fc191981a_ed": 0.0017230981,
+        "119.v0b_84b_7a_d0f40": 0.0017230981
     }
 }

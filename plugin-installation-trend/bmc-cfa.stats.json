@@ -2,12 +2,20 @@
     "name": "bmc-cfa",
     "installations": {
         "1638316800000": 1,
-        "1640995200000": 2
+        "1640995200000": 2,
+        "1648771200000": 4
     },
     "installationsPercentage": {
         "1638316800000": 0.00033865243,
-        "1640995200000": 0.00067923014
+        "1640995200000": 0.00067923014,
+        "1648771200000": 0.0013276465
     },
-    "installationsPerVersion": {},
-    "installationsPercentagePerVersion": {}
+    "installationsPerVersion": {
+        "1.0.0054.v852dee7052fc": 1,
+        "85.v95da6e902c8f": 3
+    },
+    "installationsPercentagePerVersion": {
+        "1.0.0054.v852dee7052fc": 0.00033191164,
+        "85.v95da6e902c8f": 0.0009957349
+    }
 }

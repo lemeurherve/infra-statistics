@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Plugin and Core Version Matrix for the enhanced-metrics Plugin</title>
+        <link rel="stylesheet" type="text/css" href="pluginversions.css" />
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+          crossorigin="anonymous"></script>
+        <script type="text/javascript" src="pluginversions.js"></script>
+        <script type="text/javascript">
+$(document).ready(function() {
+    var versionData = {"1.6":{"2.332.2":31,"2.346.2":1,"2.332.3":1},"1.5":{"2.332.2":7,"2.346.2":2}};
+
+    parseData(versionData, "enhanced-metrics");
+});
+        </script>
+    </head>
+    <body>
+        <table id="versionsContainer"></table>
+    </body>
+</html>

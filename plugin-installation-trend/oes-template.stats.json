@@ -2,12 +2,18 @@
     "name": "oes-template",
     "installations": {
         "1654041600000": 1,
-        "1656633600000": 1
+        "1656633600000": 1,
+        "1661990400000": 2
     },
     "installationsPercentage": {
         "1654041600000": 0.00032720587,
-        "1656633600000": 0.00033514647
+        "1656633600000": 0.00033514647,
+        "1661990400000": 0.00065569254
     },
-    "installationsPerVersion": {},
-    "installationsPercentagePerVersion": {}
+    "installationsPerVersion": {
+        "1.37.v02eddc49d161": 2
+    },
+    "installationsPercentagePerVersion": {
+        "1.37.v02eddc49d161": 0.00065569254
+    }
 }

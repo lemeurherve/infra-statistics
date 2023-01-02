@@ -2,12 +2,18 @@
     "name": "bmc-change-manager-imstm",
     "installations": {
         "1656633600000": 2,
-        "1659312000000": 2
+        "1659312000000": 2,
+        "1669852800000": 1
     },
     "installationsPercentage": {
         "1656633600000": 0.00067029294,
-        "1659312000000": 0.00065314013
+        "1659312000000": 0.00065314013,
+        "1669852800000": 0.00034249507
     },
-    "installationsPerVersion": {},
-    "installationsPercentagePerVersion": {}
+    "installationsPerVersion": {
+        "37.v84219da910a3": 1
+    },
+    "installationsPercentagePerVersion": {
+        "37.v84219da910a3": 0.00034249507
+    }
 }

@@ -1,11 +1,17 @@
 {
     "name": "kanboard-publisher",
     "installations": {
-        "1480550400000": 1
+        "1480550400000": 1,
+        "1669852800000": 1
     },
     "installationsPercentage": {
-        "1480550400000": 0.00074923766
+        "1480550400000": 0.00074923766,
+        "1669852800000": 0.00034249507
     },
-    "installationsPerVersion": {},
-    "installationsPercentagePerVersion": {}
+    "installationsPerVersion": {
+        "1.5": 1
+    },
+    "installationsPercentagePerVersion": {
+        "1.5": 0.00034249507
+    }
 }

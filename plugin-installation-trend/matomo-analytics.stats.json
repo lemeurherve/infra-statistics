@@ -1,11 +1,17 @@
 {
     "name": "matomo-analytics",
     "installations": {
-        "1672531200000": 1
+        "1672531200000": 1,
+        "1682899200000": 1
     },
     "installationsPercentage": {
-        "1672531200000": 0.00034045335
+        "1672531200000": 0.00034045335,
+        "1682899200000": 0.00037362645
     },
-    "installationsPerVersion": {},
-    "installationsPercentagePerVersion": {}
+    "installationsPerVersion": {
+        "1.14.vfd9785108a_45": 1
+    },
+    "installationsPercentagePerVersion": {
+        "1.14.vfd9785108a_45": 0.00037362645
+    }
 }

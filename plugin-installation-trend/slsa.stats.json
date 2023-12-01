@@ -1,15 +1,17 @@
 {
     "name": "slsa",
     "installations": {
-        "1696118400000": 2
+        "1696118400000": 2,
+        "1698796800000": 4
     },
     "installationsPercentage": {
-        "1696118400000": 0.00068393606
+        "1696118400000": 0.00068393606,
+        "1698796800000": 0.0013340805
     },
     "installationsPerVersion": {
-        "40.v733b_0005fa_fd": 2
+        "40.v733b_0005fa_fd": 4
     },
     "installationsPercentagePerVersion": {
-        "40.v733b_0005fa_fd": 0.00068393606
+        "40.v733b_0005fa_fd": 0.0013340805
     }
 }

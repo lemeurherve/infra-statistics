@@ -1,15 +1,21 @@
 {
     "name": "pipeline-agent-build-history",
     "installations": {
-        "1701388800000": 1
+        "1701388800000": 1,
+        "1704067200000": 7
     },
     "installationsPercentage": {
-        "1701388800000": 0.00035269264
+        "1701388800000": 0.00035269264,
+        "1704067200000": 0.0024143343
     },
     "installationsPerVersion": {
+        "16.vb_528eea_d8d6d": 5,
+        "4.47": 1,
         "6.vdb_fa_c0844c1e": 1
     },
     "installationsPercentagePerVersion": {
-        "6.vdb_fa_c0844c1e": 0.00035269264
+        "16.vb_528eea_d8d6d": 0.0017245244,
+        "4.47": 0.0003449049,
+        "6.vdb_fa_c0844c1e": 0.0003449049
     }
 }

@@ -1,15 +1,19 @@
 {
     "name": "database-mariadb",
     "installations": {
-        "1701388800000": 6
+        "1701388800000": 6,
+        "1704067200000": 8
     },
     "installationsPercentage": {
-        "1701388800000": 0.0021161558
+        "1701388800000": 0.0021161558,
+        "1704067200000": 0.0027592392
     },
     "installationsPerVersion": {
+        "35.va_ea_62c1d0f0a_": 2,
         "7.v87646a_8a_7b_b_7": 6
     },
     "installationsPercentagePerVersion": {
-        "7.v87646a_8a_7b_b_7": 0.0021161558
+        "35.va_ea_62c1d0f0a_": 0.0006898098,
+        "7.v87646a_8a_7b_b_7": 0.0020694293
     }
 }
